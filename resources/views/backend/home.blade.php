@@ -1,4 +1,5 @@
 @extends('backend.layouts.app')
+@section('title', 'Dashboard')
 @section('content')
     {{-- MAIN --}}
     {{-- TOP NAV BAR --}}
@@ -25,8 +26,9 @@
                     <!-- / Search form -->
                 </div>
                 <!-- Navbar links -->
+                    {{-- NOTIFICATION --}}
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item dropdown">
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link text-dark notification-bell unread dropdown-toggle"
                             data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown"
                             data-bs-display="static" aria-expanded="false">
@@ -37,6 +39,7 @@
                                 </path>
                             </svg>
                         </a>
+                    
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center mt-2 py-0">
                             <div class="list-group list-group-flush">
                                 <a href="#"
@@ -158,8 +161,8 @@
                                     View all
                                 </a>
                             </div>
-                        </div>
-                    </li>
+                       </div> --}}
+                    </li> 
                     <li class="nav-item dropdown ms-lg-3">
                         <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -294,7 +297,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 mb-4">
+        {{-- <div class="col-12 mb-4">
             <div class="card bg-yellow-100 border-0 shadow">
                 <div class="card-header d-sm-flex flex-row align-items-center flex-0">
                     <div class="d-block mb-3 mb-sm-0">
@@ -315,7 +318,7 @@
                     <div class="ct-chart-sales-value ct-double-octave ct-series-g"></div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="col-12 col-sm-6 col-xl-4 mb-4">
             <div class="card border-0 shadow">
                 <div class="card-body">
@@ -378,13 +381,13 @@
                                 </svg>
                             </div>
                             <div class="d-sm-none">
-                                <h2 class="fw-extrabold h5">Revenue</h2>
+                                <h2 class="fw-extrabold h5">Restaurants</h2>
                                 <h3 class="mb-1">$43,594</h3>
                             </div>
                         </div>
                         <div class="col-12 col-xl-7 px-xl-0">
                             <div class="d-none d-sm-block">
-                                <h2 class="h6 text-gray-400 mb-0">Revenue</h2>
+                                <h2 class="h6 text-gray-400 mb-0">Restaurants</h2>
                                 <h3 class="fw-extrabold mb-2">$43,594</h3>
                             </div>
                             <small class="d-flex align-items-center text-gray-500">

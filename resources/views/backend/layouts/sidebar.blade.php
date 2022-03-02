@@ -38,13 +38,14 @@
             <li class="nav-item">
                 <a href="../../index.html" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
-                        <img src="{{asset('backend/assets/img/brand/light.svg')}}" height="20" width="20" alt="Volt Logo">
+                        <img src="{{ asset('backend/assets/img/brand/light.svg') }}" height="20" width="20"
+                            alt="Volt Logo">
                     </span>
-                    <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
+                    <span class="mt-1 ms-1 sidebar-text">Better Dinner</span>
                 </a>
             </li>
             <li class="nav-item  active ">
-                <a href="../../pages/dashboard/dashboard.html" class="nav-link">
+                <a href="{{ route('admin.home') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -56,24 +57,114 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/kanban.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
+                <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-admin">
                     <span>
                         <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
-                                </path>
-                            </svg>
+                            <i class="icon icon-xs me-3 fas fa-user-tie"></i>
                         </span>
-                        <span class="sidebar-text">Kanban</span>
+                        <span class="sidebar-text">Admin</span>
                     </span>
-                    <span>
-                        <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </span>
-                </a>
+                </span>
+                <div class="multi-level collapse " role="list" id="submenu-admin" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                                <span class="sidebar-text">Admin User</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
+
+            <li class="nav-item">
+                <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-user">
+                    <span>
+                        <span class="sidebar-icon">
+                            <i class="icon icon-xs me-2 fas fa-users"></i>
+                        </span>
+                        <span class="sidebar-text">User Management</span>
+                    </span>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </span>
+                <div class="multi-level collapse " role="list" id="submenu-user" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                                <span class="sidebar-text">User</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-restaurant">
+                    <span>
+                        <span class="sidebar-icon">
+                            <i class="icon icon-xs me-2 fas fa-store"></i>
+                        </span>
+                        <span class="sidebar-text">Restaurant</span>
+                    </span>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </span>
+                <div class="multi-level collapse " role="list" id="submenu-restaurant" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                                <span class="sidebar-text">Restaurants</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="multi-level collapse " role="list" id="submenu-restaurant" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                                <span class="sidebar-text">Orders</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="multi-level collapse " role="list" id="submenu-restaurant" aria-expanded="false">
+                    <ul class="flex-column nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                                <span class="sidebar-text">Menu</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            {{-- ====================================================================================================================================== --}}
+            {{-- ====================================================================================================================================== --}}
+
             <li class="nav-item ">
                 <a href="../../pages/transactions.html" class="nav-link">
                     <span class="sidebar-icon">
@@ -99,44 +190,6 @@
                         </svg>
                     </span>
                     <span class="sidebar-text">Settings</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/calendar.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-text">Calendar</span>
-                    </span>
-                    <span>
-                        <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/map.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
-                    <span>
-                        <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                        <span class="sidebar-text">Map</span>
-                    </span>
-                    <span>
-                        <span class="badge badge-sm bg-secondary ms-1 text-gray-800">Pro</span>
-                    </span>
                 </a>
             </li>
             <li class="nav-item">
@@ -297,35 +350,7 @@
                 </div>
             </li>
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
-            <li class="nav-item">
-                <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
-                    target="_blank" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                    <span class="sidebar-text">Documentation <span
-                            class="badge badge-sm bg-secondary ms-1 text-gray-800">v1.4</span></span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="../../pages/upgrade-to-pro.html"
-                    class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
-                    <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
-                        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </span>
-                    <span>Upgrade to Pro</span>
-                </a>
-            </li>
+
         </ul>
     </div>
 </nav>
