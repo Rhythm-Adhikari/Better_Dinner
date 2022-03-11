@@ -2,18 +2,18 @@
 Before downloading this repo please make sure that you have XAMPP installed and this repository cloned and have apache and my MySql running
 
 
-## install npm the the directory where you have your reposiitory
+# install npm the the directory where you have your reposiitory
 
 ### In the project directory, you need to run:In the xampp directory, you have your folder:
 
-## install npm the the directore where you have your reposiitory
+### install npm the the directore where you have your reposiitory
 
 ### create a .env file Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu
 
-# Run php artisan key:generate
-# Run php artisan migrate
-# Run php artisan serve
-# Go to http://localhost:8000/
+#### Run php artisan key:generate
+#### Run php artisan migrate
+#### Run php artisan serve
+#### Go to http://localhost:8000/
 
 
 ## About Laravel
