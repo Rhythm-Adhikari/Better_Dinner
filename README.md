@@ -8,6 +8,9 @@ Before downloading this repo please make sure that you have XAMPP installed and 
 
 ### install npm the the directore where you have your reposiitory
 
+### composer install
+### npm install
+
 ### create a .env file Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu
 
 #### Run php artisan key:generate
