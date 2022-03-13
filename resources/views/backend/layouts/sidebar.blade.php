@@ -122,7 +122,7 @@
                         <span class="sidebar-icon">
                             <i class="icon icon-xs me-2 fas fa-store"></i>
                         </span>
-                        <span class="sidebar-text">Restaurant</span>
+                        <span class="sidebar-text">Restaurant <br><div class="pl-10" style="padding-left: 40px;">Management</div></span>
                     </span>
                     <span class="link-arrow">
                         <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
