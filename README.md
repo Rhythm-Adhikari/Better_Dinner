@@ -9,10 +9,10 @@
  also make sure you have some form of git control as it helps with push, pull, merge and commit. simpel googling will help you with how to use it.
   
 # open the repository and install npm using cmd or terminal if you are using linux
-    ``npm install``
+    npm install
 
 # install composer the same way you installed npm
-```composer install```
+composer install
 if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
 
 
