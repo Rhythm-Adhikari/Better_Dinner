@@ -13,7 +13,7 @@
 
 # install composer the same way you installed npm
     composer install
-    `````````````````
+    
 if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
 
 
