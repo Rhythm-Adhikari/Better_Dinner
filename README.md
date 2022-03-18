@@ -24,6 +24,9 @@ if you are using windows, you can type ```copy .env.example .env``` or ```cp .en
 if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
 #### Run php artisan migrate
 you might have isse because you dont have a database table for this create a database table named laravel(this can be anything but make sure that you edit it in the .env file)
+Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
+
+
 #### Run php artisan serve
 
 #### Go to http://localhost:8000/
