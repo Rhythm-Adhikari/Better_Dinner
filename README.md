@@ -7,8 +7,13 @@
    
  # download this repo and place it inside xampp\htdocs.
  also make sure you have some form of git control as it helps with push, pull, merge and commit. simpel googling will help you with how to use it.
+ 
+ # open XAMPP and start mySql and apache
+ 
+ # create a database
+ start mySql and apache and open the mysql admin page. there create a new database called laravel.
   
-# open the repository and install npm using cmd or terminal if you are using linux
+# open the repository that you have downloaded which is inside htdocs and install npm using cmd or terminal if you are using linux
     npm install
 
 # install composer the same way you installed npm
@@ -19,6 +24,10 @@ if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",**
 
 ### create a .env file Copy .env.example file to .env on the root folder. 
 if you are using windows, you can type ```copy .env.example .env``` or ```cp .env.example .env``` if using Ubuntu
+
+### install laravel passport
+    php artisan passport:install
+
 
 #### Run php artisan key:generate
 if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
