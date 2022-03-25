@@ -1,21 +1,43 @@
 
-Before downloading this repo please make sure that you have XAMPP installed and this repository cloned and have apache and my MySql running
+# Install xampp
+    we need the web server apache and database mysql inorder to run this.
+    
+# download and setup composer
+    well download composer and follow the steps. it will ask for php.exe which can be found in the xampp folder.
+   
+ # download this repo and place it inside xampp\htdocs.
+ also make sure you have some form of git control as it helps with push, pull, merge and commit. simpel googling will help you with how to use it.
+ 
+ # open XAMPP and start mySql and apache
+ 
+ # create a database
+ start mySql and apache and open the mysql admin page. there create a new database called laravel.
+  
+# open the repository that you have downloaded which is inside htdocs and install npm using cmd or terminal if you are using linux
+    npm install
+
+# install composer the same way you installed npm
+    composer install
+    
+if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
 
 
-# install npm the the directory where you have your reposiitory
+### create a .env file Copy .env.example file to .env on the root folder. 
+if you are using windows, you can type ```copy .env.example .env``` or ```cp .env.example .env``` if using Ubuntu
 
-### In the project directory, you need to run:In the xampp directory, you have your folder:
+### install laravel passport
+    php artisan passport:install
 
-### install npm the the directore where you have your reposiitory
-
-### composer install
-### npm install
-
-### create a .env file Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu
 
 #### Run php artisan key:generate
+if you get any errors because of version issue add/edit **"php": "^7.3|8.1.2",** to your composer.json
 #### Run php artisan migrate
+you might have isse because you dont have a database table for this create a database table named laravel(this can be anything but make sure that you edit it in the .env file)
+Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
+
+
 #### Run php artisan serve
+
 #### Go to http://localhost:8000/
 
 
