@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,8 @@ Route::namespace('Api')->group(function(){
 
     Route::middleware('auth:api')->group(function(){
         Route::post('logout','AuthController@logout');
+
+        Route::get('profile','PageController@profile');
     });
 
 });
