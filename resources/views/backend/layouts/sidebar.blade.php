@@ -44,7 +44,7 @@
                     <span class="mt-1 ms-1 sidebar-text">Better Dinner</span>
                 </a>
             </li>
-            <li class="nav-item  active ">
+            <li class="nav-item @yield('home-active')">
                 <a href="{{ route('admin.home') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -85,7 +85,7 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item @yield('user-active')">
                 <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-user">
                     <span>
@@ -106,7 +106,7 @@
                 <div class="multi-level collapse " role="list" id="submenu-user" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                            <a class="nav-link" href="{{route('admin.user.index')}}">
                                 <span class="sidebar-text">User</span>
                             </a>
                         </li>
