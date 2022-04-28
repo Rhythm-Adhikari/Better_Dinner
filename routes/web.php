@@ -24,7 +24,7 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 
 Route::get('/', function () {
-    return redirect('admin/login');
+    return view('welcome');
 });
 
 

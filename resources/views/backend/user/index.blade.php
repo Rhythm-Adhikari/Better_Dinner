@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'Dashboard')
+@section('title', 'User')
 @section('user-active', 'active')
 @section('content')
 
