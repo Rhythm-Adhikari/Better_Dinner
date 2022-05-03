@@ -114,6 +114,15 @@ main {
 
 /* media queries */
 
+@media (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+    header {
+        padding: 1rem 3rem;
+    }
+}
+
 @media (max-width:992px) {
     html {
         font-size: 55%;
