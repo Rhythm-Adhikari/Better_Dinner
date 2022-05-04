@@ -27,7 +27,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/about','Frontend\PageController@about')->name('about');
 //User Auth
 Auth::routes();
 

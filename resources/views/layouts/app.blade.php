@@ -95,7 +95,7 @@
                 <a href="#restaurants">restaurants</a>
                 <a href="#order">Order</a>
                 <a href="#booking">Booking</a>
-                <a href="#about">About</a>
+                <a href="{{route('about')}}">About</a>
             </nav>
 
             <div class="icons">

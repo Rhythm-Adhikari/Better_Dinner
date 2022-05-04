@@ -15,7 +15,7 @@
     outline: none;
     border: none;
     text-transform: capitalize;
-    /* transition: all 0.5s linear; */
+    transition: all 0.5s linear;
 }
 
 html {
@@ -24,6 +24,9 @@ html {
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
+
+
+/* ================================================== */
 
 
 /* HEADER */
@@ -101,29 +104,35 @@ header .icons #menu-bars {
     display: none;
 }
 
-main {
-    position: fixed;
-    top: 10%;
-    left: 0;
-    right: 0;
-}
-
 
 /* HEADER */
 
 
+/* ================================================== */
+
+
+/* Search form */
+
+
+/* Search form */
+
+
+/* ================================================== */
+
+
 /* media queries */
 
-@media (max-width:1200px) {
+
+/* @media (max-width: 1200px) {
     html {
         font-size: 60%;
     }
     header {
         padding: 1rem 3rem;
     }
-}
+} */
 
-@media (max-width:992px) {
+@media all and (max-width: 991.98px) {
     html {
         font-size: 55%;
     }
@@ -132,7 +141,7 @@ main {
     }
 }
 
-@media (min-width:468px) and (max-width:768px) {
+@media all and (max-width: 767.98px) {
     header .icons #menu-bars {
         display: inline-block;
     }
@@ -141,10 +150,17 @@ main {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
         border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+        background: #ffff;
         padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     header .navbar a {
         display: block;
