@@ -1,6 +1,8 @@
 @extends('layouts.app_auth')
 
 <div class="login">
+    <div class="log">
+
     <div class="center">
         <h1>Better Dinner</h1>
         <form action="{{route('login')}}" method="POST">
@@ -21,4 +23,11 @@
             </div>
         </form>
     </div>
+    </div>
+</div>
+
+<div class="tesst">
+    <img src="{{asset('img/logo.png')}}" width="1469px" height="980px"/>
+
+
 </div>
