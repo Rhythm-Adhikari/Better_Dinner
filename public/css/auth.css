@@ -7,6 +7,16 @@
     background-image: linear-gradient(315deg, #E84857 0%, #E84857 74%);
     overflow: hidden;
 }
+.register{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #E84857;
+    background-image: linear-gradient(315deg, #E84857 0%, #E84857 74%);
+    overflow: hidden;
+
+}
 
 .center {
     position: absolute;
@@ -141,3 +151,5 @@ button:hover {
 .signup_link a:hover {
     text-decoration: underline;
 }
+
+
