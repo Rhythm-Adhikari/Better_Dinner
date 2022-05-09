@@ -103,6 +103,134 @@ header .icons a:hover {
 header .icons #menu-bars {
     display: none;
 }
+/*--------------------------------------About Us--------------------------------------------------------------------------*/
+.about{
+
+    background-color: beige;
+
+}
+.me{
+    background-image: url("/img/logo.png");
+    background-repeat: no-repeat;
+    background-color: beige;
+    background-position: center;
+    opacity: 0.6;
+
+
+}
+/*.content-footer,*/
+/*.masthead-heading,*/
+/*.masthead-intro {*/
+/*    text-align: center;*/
+
+/*}*/
+
+/*.masthead {*/
+/*    padding: 6em 0;*/
+/*    background-image: url('');*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    border-top: solid 1em #FFCF33;*/
+
+/*}*/
+
+.masthead-intro {
+    /* Layout Declarations */
+    margin-bottom: 0.1em;
+    /* Typography Declarations */
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 5em;
+    opacity: 1;
+
+}
+
+
+.introduction-section,
+.location-section,
+.questions-section {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    opacity: 1;
+}
+
+.introduction-section > p,
+.location-section > p,
+.questions-section,
+.content-footer > p {
+    /* Typography Declarations */
+    font-size: 103%;
+    letter-spacing: 0.05em;
+
+    font-weight: bolder;
+    color: #000000;
+    background-color: #ffffff;
+    opacity: 0.5;
+
+}
+
+.questions-section > h2 {
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 2.5em;
+    font-weight: bolder;
+    /* Layout */
+    margin: 2em 0 1em 0;
+    opacity: 1;
+    color: Black;
+
+}
+
+section > h1 {
+    margin-top: 0.6em;
+    color: #ff2348;
+    opacity: 1;
+    font-weight: bold;
+}
+.content-footer {
+    margin: 20px 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #60a6de;
+    text-decoration: none;
+    opacity: 1;
+}
+.social > li {
+    display: inline-block;
+    margin: 0 5px;
+    opacity: 1;
+    font-weight: bold;
+}
+.content-footer > p3 {
+    color: #F7EDE1;
+    opacity: 1;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 3em 0;
+        font-size: 10em;
+        opacity: 1;
+    }
+    .masthead-heading {
+        font-size: 5em;
+        opacity: 1;
+    }
+    .content-footer {
+        padding: 2em 2.5em;
+        font-size: 2em;
+        opacity: 1;
+    }
+    section > h1{
+        font-size: 2.5em;
+    }
+}
 
 
 /* HEADER */

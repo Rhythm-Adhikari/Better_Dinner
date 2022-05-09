@@ -23,6 +23,7 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,5 +34,9 @@ Auth::routes();
 
 Route::middleware('auth')->namespace('Frontend')->group(function () {
 
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//    user booking and registration
+    Route::get('/booking','PageController@booking')->name('booking');
+    Route::get('/order','PageController@order')->name('order');
 });

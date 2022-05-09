@@ -19,12 +19,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
           <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
         <!-- Custom CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -94,8 +94,8 @@
             <nav class="navbar">
                 <a class="active" href="#home">Home</a>
                 <a href="#restaurants">restaurants</a>
-                <a href="#order">Order</a>
-                <a href="#booking">Booking</a>
+                <a href="{{route('order')}}">Order</a>
+                <a href="{{route('booking')}}">Booking</a>
                 <a href="{{route('about')}}">About</a>
             </nav>
 

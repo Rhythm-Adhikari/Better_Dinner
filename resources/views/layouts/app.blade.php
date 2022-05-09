@@ -93,8 +93,8 @@
             <nav class="navbar">
                 <a class="active" href="#home">Home</a>
                 <a href="#restaurants">restaurants</a>
-                <a href="#order">Order</a>
-                <a href="#booking">Booking</a>
+                <a href="{{route('order')}}">Order</a>
+                <a href="{{route('booking')}}">Booking</a>
                 <a href="{{route('about')}}">About</a>
             </nav>
 
