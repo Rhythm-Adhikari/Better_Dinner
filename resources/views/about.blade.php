@@ -26,13 +26,13 @@
     <section class="questions-section">
         <h1>More about Better Dinner</h1>
         <h2>What is Better Dinner</h2>
-        <p>My favorite hobby is building things on the internet like ecommerce sites and email marketing campaigns.</p>
-        <h2>What's your dream job?</h2>
-        <p>My dream job is similar to my current job except I would like to be building software instead of buildings.</p>
-        <h2>Where do you live?</h2>
-        <p>I live on a rural acreage, but I'm close to Ottawa and Montreal.</p>
-        <h2>Why do you want to be a web developer?</h2>
-        <p>Because programming is awesome and programming for the internet is even more awesome.</p>
+        <p>Better dinne is a atate of the arrt food ordering and delevery system.</p>
+        <h2>how is better dinner better that other known products</h2>
+        <p>better dinner allows resturants a full system that can let them see thair sales , staff rostering, ordering, delivery and reservations.</p>
+        <h2>Where is better dinner implemented</h2>
+        <p>UOW-WOllongong.</p>
+        <h2>Food for thoughts?</h2>
+        <p>Better dinner .</p>
     </section>
     </section>
 
