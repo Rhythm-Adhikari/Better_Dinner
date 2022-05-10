@@ -65,9 +65,34 @@
         </header>
 
         {{-- Header section --}}
-        <main class="pt-5">
-            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quasi deleniti minus expedita dolore ipsum ut doloremque at! Sed fuga pariatur totam corporis esse ipsa saepe corrupti harum obcaecati ad.</h1>
-        </main>
+       <section class="home" id="home">
+           <div class="home-slider">
+               <div class="wrapper">
+                   <div class="slide">
+                    <div class="image">
+                        <img src="{{asset('assets/cooking.png')}}" alt="">
+                    </div>
+                     <div class="content">
+                         <span style="font-family:  'Abhaya Libre', serif; font-weight: 700 ">Best Food <span style="color: #e84857;font-family:  'Abhaya Libre', serif; font-weight: 700">Delivery</span> in Your Area</span>
+                         <h3>Better Dinner</h3>
+                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perferendis eius dicta maxime eveniet, repellendus beatae, similique enim eaque officiis doloremque labore? Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
+                        <a href="#" class="btn">Order Now</a>
+                        </div>  
+                   </div>
+               </div>
+               <div class="slide">
+                <div class="content">
+                    <span>Our special dish</span>
+                    <h3>fried noodels</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perferendis eius dicta maxime eveniet, repellendus beatae, similique enim eaque officiis doloremque labore? Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
+                   <a href="#" class="btn"></a>
+                   </div>
+                   <div class="image">
+                       <img src="" alt="">
+                   </div>
+              </div>
+           </div>
+       </section>
     </div>
 
 
