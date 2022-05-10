@@ -24,6 +24,11 @@ class PageController extends Controller
         return view('order');
     }
 
+    public function restaurant(){
+        $restaurants = Restaurant::get();
+        return view('restaurant',compact("restaurants"));
+    }
+
     public function menu($restaurant_id){
     $menus = DB::table('menus')->where('restaurant_id',$restaurant_id )->get();
     return view('order', compact('menus'));

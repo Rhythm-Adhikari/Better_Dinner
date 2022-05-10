@@ -38,8 +38,8 @@
 
             <nav class="navbar">
                 <a class="active" href="{{ url('/') }}">Home</a>
-                <a href="#restaurants">restaurants</a>
-                <a href="{{route('order')}}">Order</a>
+                <a href="{{route('restaurant')}}">restaurants</a>
+                <a href="#order">Order</a>
                 <a href="{{route('booking')}}">Booking</a>
                 <a href="{{route('about')}}">About</a>
             </nav>
@@ -68,7 +68,7 @@
                 <div class="wrapper">
                     @yield('content')
                 </div>
-               
+
             </div>
         </section>
     </div>
