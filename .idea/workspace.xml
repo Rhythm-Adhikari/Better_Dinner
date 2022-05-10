@@ -4,7 +4,6 @@
     <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +191,7 @@
       <workItem from="1651744420148" duration="6213000" />
       <workItem from="1652089004321" duration="8310000" />
       <workItem from="1652099625374" duration="368000" />
-      <workItem from="1652137239477" duration="6317000" />
+      <workItem from="1652137239477" duration="7285000" />
     </task>
     <servers />
   </component>
