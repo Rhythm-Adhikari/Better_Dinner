@@ -42,6 +42,7 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 //    user booking and registration
     Route::get('/booking','PageController@booking')->name('booking');
     Route::get('/order','PageController@order')->name('order');
+    Route::get('/restaurant','PageController@restaurant')->name('restaurant');
 
     Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
 });
