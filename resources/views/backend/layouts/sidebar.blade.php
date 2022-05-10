@@ -115,7 +115,7 @@
             </li>
 
 
-            <li class="nav-item">
+            <li class="nav-item  @yield('restaurant-active')">
                 <span class="nav-link  collapsed  d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-restaurant">
                     <span>
@@ -136,7 +136,7 @@
                 <div class="multi-level collapse " role="list" id="submenu-restaurant" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                            <a class="nav-link" href="{{route('admin.restaurant.index')}}">
                                 <span class="sidebar-text">Restaurants</span>
                             </a>
                         </li>
