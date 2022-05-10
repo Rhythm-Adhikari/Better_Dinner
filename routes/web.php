@@ -44,4 +44,7 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     Route::get('/order','PageController@order')->name('order');
 
     Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
+
+    Route::get('menus', 'PageController@menus')->name('menus');
+
 });
