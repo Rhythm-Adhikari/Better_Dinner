@@ -53,6 +53,11 @@
                 @else
                     <i class="fas fa-bars" id="menu-bars"></i>
                     <i class="fas fa-search" id="search-icon"></i>
+                    <form action="" id="search-form">
+                        <input type="search" placeholder="search here..." name="" id="search-box">
+                        <label for="search-box" class="fas fa-search"></label>
+                        <i class="fas fa-times" id="close"></i>
+                    </form>
                     <a href='#' class="fas fa-shopping-cart"></a>
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>

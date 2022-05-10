@@ -51,6 +51,11 @@
                 @else
                     <i class="fas fa-bars" id="menu-bars"></i>
                     <i class="fas fa-search" id="search-icon"></i>
+                    <form action="" id="search-form">
+                        <input type="search" placeholder="search here..." name="" id="search-box">
+                        <label for="search-box" class="fas fa-search"></label>
+                        <i class="fas fa-times" id="close"></i>
+                    </form>
                     <a href='#' class="fas fa-shopping-cart"></a>
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>
@@ -59,6 +64,7 @@
                         @csrf
                     </form>
                 @endguest
+
             </div>
         </header>
 
@@ -72,6 +78,26 @@
             </div>
         </section>
     </div>
+
+{{--    <script>--}}
+{{--        document.querySelector('#search-icon').onclick = () =>{--}}
+{{--            document.querySelector('#search-form').classList.toggle('active');--}}
+{{--        }--}}
+
+{{--        document.querySelector('#close').onclick = () =>{--}}
+{{--            document.querySelector('#search-form').classList.remove('active');--}}
+{{--        }--}}
+{{--        function loader(){--}}
+{{--            document.querySelector('.loader-container').classList.add('fade-out');--}}
+{{--        }--}}
+
+{{--        function fadeOut(){--}}
+{{--            setInterval(loader, 3000);--}}
+{{--        }--}}
+
+{{--        window.onload = fadeOut;--}}
+
+{{--    </script>--}}
 
 
 
