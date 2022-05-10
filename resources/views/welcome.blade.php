@@ -82,11 +82,13 @@
                                 Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
                             <a href="#" class="btn">Order Now</a>
                         </div>
+
+
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="content">
-                        <span>Our special <span style="color: #e84857; font-weight: 700">Restaurants</span></span>
+
+                    <div class="content"> <span>Our special <span style="color: #e84857; font-weight: 700">Restaurants</span></span></div>
                         <div class="card" style="width: 30rem">
                             <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
                             <div class="card-body">
@@ -120,6 +122,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
         </section>
     </div>

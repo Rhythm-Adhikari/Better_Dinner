@@ -568,6 +568,20 @@ body {
         background: #f1f7ed;
     }
 }
-
+/*-------------------------------------------test order css-----------------------------------------------*/
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
 
 /* media queries */
+
+/*---------------------------------CSS FOr Welcome page--------- food order------------------------------------*/
+
+.slide{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+
+}
