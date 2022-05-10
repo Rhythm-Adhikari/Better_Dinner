@@ -86,7 +86,9 @@
                 </div>
                 <div class="slide">
                     <div class="content">
-                        <span>Our special <span style="color: #e84857; font-weight: 700">Restaurants</span></span>
+                        <span style="font-family:  'Abhaya Libre', serif; font-weight: 700 ">Our Special<span
+                            style="color: #e84857;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span>
+                        </span>
                         <div class="card" style="width: 30rem">
                             <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
                             <div class="card-body">
@@ -119,6 +121,18 @@
                                 <a href="#" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <span style="font-family:  'Abhaya Libre', serif; font-weight: 700 ">Our <span
+                                style="color: #e84857;font-family:  'Abhaya Libre', serif; font-weight: 700">Services</span>
+                        </span>
+                        <h3>Better Dinner</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perferendis eius dicta
+                            maxime eveniet, repellendus beatae, similique enim eaque officiis doloremque labore?
+                            Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
+                        <a href="#" class="btn">Order Now</a>
                     </div>
                 </div>
         </section>

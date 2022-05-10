@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,8 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 
 Route::get('/', function () {
-    return view('welcome');
+    $restaurants = Restaurant::get();
+    return view('welcome', compact('restaurants'));
 });
 
 Route::get('/about','Frontend\PageController@about')->name('about');
