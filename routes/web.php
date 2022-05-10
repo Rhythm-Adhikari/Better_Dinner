@@ -27,6 +27,7 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 Route::get('/', function () {
     $restaurants = Restaurant::get();
+    // dd($restaurants);
     return view('welcome', compact('restaurants'));
 });
 
@@ -41,4 +42,6 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 //    user booking and registration
     Route::get('/booking','PageController@booking')->name('booking');
     Route::get('/order','PageController@order')->name('order');
+
+    Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
 });

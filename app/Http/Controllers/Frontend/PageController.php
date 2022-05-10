@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use PDO;
+use App\Models\Menu;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
@@ -18,5 +22,10 @@ class PageController extends Controller
 
     public function order(){
         return view('order');
+    }
+
+    public function menu($restaurant_id){
+    $menus = DB::table('menus')->where('restaurant_id',$restaurant_id )->get();
+    return view('order', compact('menus'));
     }
 }

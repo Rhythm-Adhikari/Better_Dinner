@@ -41,7 +41,7 @@
             <nav class="navbar">
                 <a class="" href="{{ url('/') }}">Home</a>
                 <a href="#restaurants">restaurants</a>
-                <a href="{{ route('order') }}">Order</a>
+                <a href="#">Order</a>
                 <a href="{{ route('booking') }}">Booking</a>
                 <a href="{{ route('about') }}">About</a>
             </nav>
@@ -87,42 +87,42 @@
                     </div>
                 </div>
                 <div class="slide">
-
                     <div class="content"> <span>Our special <span style="color: #e84857; font-weight: 700">Restaurants</span></span></div>
-                        <div class="card" style="width: 30rem">
-                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
-                                <p class="card-text">Delicious Italian restaurant.</p>
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 30rem">
-                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
-                                <p class="card-text">Delicious Italian restaurant.</p>
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 30rem">
-                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
-                                <p class="card-text">Delicious Italian restaurant.</p>
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 30rem">
-                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
-                                <p class="card-text">Delicious Italian restaurant.</p>
-                                <a href="#" class="btn btn-primary">Order Now</a>
-                            </div>
+                    @foreach ($restaurants as $restaurant)
+                    <div class="card" style="width: 30rem">
+                        <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 2.5rem">{{$restaurant->name}}</h5>
+                            <p class="card-text">{{$restaurant->description}}</p>
+                            <a href="{{route('menu',$restaurant->id)}}" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
-
+                    @endforeach
+                        
+                        {{-- <div class="card" style="width: 30rem">
+                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
+                                <p class="card-text">Delicious Italian restaurant.</p>
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem">
+                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
+                                <p class="card-text">Delicious Italian restaurant.</p>
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem">
+                            <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 2.5rem">Italian</h5>
+                                <p class="card-text">Delicious Italian restaurant.</p>
+                                <a href="#" class="btn btn-primary">Order Now</a>
+                            </div>
+                        </div> --}}
                 </div>
                 <div class="slide">
                     <div class="content">
