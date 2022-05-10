@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
     --primary: #e84857;
     --secondary: #f1f7ed;
+    --blue: #1c3557;
     --light-color: #666;
     --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
@@ -23,6 +25,31 @@ html {
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: #ffff;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #F7EDE1;
+    background: #e84857;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background: #1c3557;
+    letter-spacing: .1rem;
 }
 
 
@@ -106,6 +133,43 @@ header .icons #menu-bars {
 
 
 /*--------------------------------------Home section--------------------------------------------------------------------------*/
+
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+
+.home .home-slider .slide .content {
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image {
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+    width: 100%;
+}
+
+.home .home-slider .slide .content span {
+    color: black;
+    font-size: 5.5rem;
+}
+
+.home .home-slider .slide .content h3 {
+    color: black;
+    font-size: 3.5rem;
+}
+
+.home .home-slider .slide .content p {
+    color: var(--light-color);
+    font-size: 2rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
 
 
 /*--------------------------------------About Us--------------------------------------------------------------------------*/
@@ -222,9 +286,10 @@ a {
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
 
-body {
+
+/* body {
     background-image: linear-gradient(to right, #c5a8d2, #f86374)
-}
+} */
 
 .section {
     position: relative;
