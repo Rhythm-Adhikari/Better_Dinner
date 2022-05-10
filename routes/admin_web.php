@@ -21,7 +21,7 @@ Route::prefix('admin')->name('admin.')->namespace('Backend')->middleware('auth:a
     Route::resource('user','UserController');
 
     Route::get('restaurant/datatable/ssd','RestaurantController@ssd');
-    Route::resource('restaurant','restaurantController');
+    Route::resource('restaurant','RestaurantController');
 
 
   
