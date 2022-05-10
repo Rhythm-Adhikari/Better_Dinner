@@ -63,9 +63,14 @@
         </header>
 
         {{-- Header section --}}
-        <main class="pt-5">
-            @yield('content')
-        </main>
+        <section class="home" id="home">
+            <div class="home-slider">
+                <div class="wrapper">
+                    @yield('content')
+                </div>
+               
+            </div>
+        </section>
     </div>
 
 
