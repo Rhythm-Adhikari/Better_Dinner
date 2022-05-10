@@ -15,7 +15,6 @@
     outline: none;
     border: none;
     text-transform: capitalize;
-    transition: all 0.5s linear;
 }
 
 html {
@@ -111,7 +110,76 @@ header .icons #menu-bars {
 /* ================================================== */
 
 
+/* Main */
+
+main {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+
+/* Main */
+
+
+/* ================================================== */
+
+
 /* Search form */
+
+#search-form {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid #ffff;
+    padding: 1rem 0;
+    color: #f1f7ed;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder {
+    color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+#search-form label {
+    color: #ffff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover {
+    color: #e84857;
+}
+
+#search-form #close {
+    position: absolute;
+    color: #ffff;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+}
 
 
 /* Search form */
@@ -158,6 +226,7 @@ header .icons #menu-bars {
         background: #ffff;
         padding: 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 0.5s linear;
     }
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -168,6 +237,10 @@ header .icons #menu-bars {
         margin: 1rem;
         font-size: 2rem;
         background: #f1f7ed;
+    }
+    #search-form #search-box {
+        width: 90%;
+        margin: 0 1rem;
     }
 }
 

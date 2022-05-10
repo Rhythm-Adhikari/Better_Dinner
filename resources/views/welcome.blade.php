@@ -19,13 +19,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-          <!-- Fontawesome -->
+
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-        <!-- Custom CSS -->
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
@@ -96,7 +96,7 @@
                 <a href="#restaurants">restaurants</a>
                 <a href="#order">Order</a>
                 <a href="#booking">Booking</a>
-                <a href="{{route('about')}}">About</a>
+                <a href="{{ route('about') }}">About</a>
             </nav>
 
             <div class="icons">
@@ -117,9 +117,14 @@
             </div>
         </header>
 
-        {{-- Header section --}}
-        <main class="pt-5">
-            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quasi deleniti minus expedita dolore ipsum ut doloremque at! Sed fuga pariatur totam corporis esse ipsa saepe corrupti harum obcaecati ad.</h1>
+        {{-- Header section ends --}}
+        {{-- Search Form --}}
+        <main>
+            <form action="" id="search-form">
+                <input type="search" placeholder="search here..." name="" id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+            </form>
         </main>
     </div>
 
