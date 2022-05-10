@@ -1,54 +1,70 @@
 @extends('layouts.app_auth')
 
-<div class="register">
-
-    <div class="center">
-
-        <h1>Better Dinner</h1>
-        <form method="POST" action="{{ route('register') }}">
-            {{-- <form action="{{route('register')}}" method="POST"> --}}
+@section('content')
+<h2>Welcome to Better Dinner</h2>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="{{route('register')}}" method="POST">
             @csrf
-            <div class="txt_field">
-                <input type="name" name="name" id="name" autofocus required>
-                <span></span>
-                <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fa-linkedin-in"></i></a>
             </div>
-
-
-            <div class="txt_field">
-                <input type="email" name="email" id="email" autofocus required>
-                <span></span>
-                <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>
-            </div>
-
-            <div class="txt_field">
-                <input type="password" name="password" id="password" @error('password') is-invalid @enderror"
-                    name="password" required autocomplete="new-password">
+            <span>or use your email for registration</span>
+            <input type="name" name="name" placeholder="Name" id="name" required />
+            <input type="email" name="email" id="email" placeholder="Email" autofocus required />
+            <input type="password" placeholder="Password" name="password" id="password" @error('password') is-invalid @enderror required autocomplete="new-password"
                 @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
+                <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                 @enderror
-                <label for="password">Password</label>
-            </div>
+            />
 
-            <div class="txt_field">
-                <input type="password" name="password_confirmation" id="password-confirm" required
-                    autocomplete="new-password">
-                <span></span>
-                <label for="password-confirm">Confirm Password</label>
-            </div>
-
-            <button type="submit" class="button">Register</button>
-
-
+            <input type="password" placeholder="Confirm Password" name="password_confirmation" id="password-confirm" required autocomplete="new-password" />
+            <button type="submit" class="button">Sign Up</button>
         </form>
     </div>
 
+
+    <div class="form-container sign-in-container">
+
+        <img src="{{ asset('img/logo.png') }}" style=" position: absolute;
+  width: 400px;  height: 600px"/>
+    </div>
+{{--    signup ends and sign in starts--}}
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-right">
+                <h1>Welcome To Better dinner</h1>
+                <p>Sign Up To Continue</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Please Login To Continue</p>
+                <a href="{{ route('login') }}" class="ghost" id="signIn">Sign In</a>
+
+            </div>
+
+        </div>
+    </div>
 </div>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
 
-<div class="tesst">
-    <img src="{{ asset('img/logo.png') }}" width="1469px" height="980px" />
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
 
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+@endsection
 
-</div>
