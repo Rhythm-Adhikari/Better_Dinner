@@ -222,9 +222,9 @@ a {
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
 
-body {
-    background-image: linear-gradient(to right, #c5a8d2, #f86374)
-}
+/*body {*/
+/*    background-image: linear-gradient(to right, #c5a8d2, #f86374)*/
+/*}*/
 
 .section {
     position: relative;
