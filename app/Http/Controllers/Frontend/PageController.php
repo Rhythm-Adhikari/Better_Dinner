@@ -33,4 +33,9 @@ class PageController extends Controller
     $menus = DB::table('menus')->where('restaurant_id',$restaurant_id )->get();
     return view('order', compact('menus'));
     }
+
+    public function menus(){
+        $menus = Menu::with('restaurant')->get();
+        return view('menus', compact('menus'));
+        }
 }

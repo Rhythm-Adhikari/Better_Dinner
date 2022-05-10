@@ -41,7 +41,7 @@
             <nav class="navbar">
                 <a class="" href="{{ url('/') }}">Home</a>
                 <a href="{{route('restaurant')}}">restaurants</a>
-                <a href="#order">Order</a>
+                <a href="{{route('menus')}}">Order</a>
                 <a href="{{ route('booking') }}">Booking</a>
                 <a href="{{ route('about') }}">About</a>
             </nav>
