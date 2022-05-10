@@ -1,6 +1,6 @@
 @extends('layouts.app_auth')
 
-<h2>Welcome to Better Dinner</h2>
+<h2 style="font-weight: 800">Welcome to Better Dinner</h2>
 <div class="container" id="container">
 {{--    <div class="form-container sign-up-container">--}}
 {{--        <form action="{{route('register')}}" method="POST">--}}
@@ -28,11 +28,11 @@
         <form action="{{route('login')}}" method="POST">
             @csrf
             <h1>Sign in</h1>
-            <div class="social-container">
+            {{-- <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            </div> --}}
             <span>or use your account</span>
             <input type="email" name="email" id="email" placeholder="Email" autofocus required />
             <input type="password" name="password" id="password" placeholder="Password" autofocus required />

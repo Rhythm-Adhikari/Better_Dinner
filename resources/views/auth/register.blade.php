@@ -1,17 +1,17 @@
 @extends('layouts.app_auth')
 
 @section('content')
-<h2>Welcome to Better Dinner</h2>
+<h2 style="font-weight: 800">Welcome to Better Dinner</h2>
 <div class="container" id="container">
     <div class="form-container sign-up-container">
         <form action="{{route('register')}}" method="POST">
             @csrf
             <h1>Create Account</h1>
-            <div class="social-container">
+            {{-- <div class="social-container">
                 <a href="#" class="social"><i class="fa-facebook-f"></i></a>
                 <a href="#" class="social"><i class="fa-google-plus-g"></i></a>
                 <a href="#" class="social"><i class="fa-linkedin-in"></i></a>
-            </div>
+            </div> --}}
             <span>or use your email for registration</span>
             <input type="name" name="name" placeholder="Name" id="name" required />
             <input type="email" name="email" id="email" placeholder="Email" autofocus required />

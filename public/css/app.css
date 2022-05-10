@@ -29,7 +29,7 @@ html {
 /* ================================================== */
 
 
-/* HEADER */
+/*---------------------------------------------------Header---------------------------------------------------------------------------------*/
 
 header {
     position: fixed;
@@ -105,6 +105,9 @@ header .icons #menu-bars {
 }
 
 
+/*--------------------------------------Home section--------------------------------------------------------------------------*/
+
+
 /*--------------------------------------About Us--------------------------------------------------------------------------*/
 
 .about {
@@ -118,42 +121,6 @@ header .icons #menu-bars {
     background-position: center;
     opacity: 0.6;
 }
-
-
-/*.content-footer,*/
-
-
-/*.masthead-heading,*/
-
-
-/*.masthead-intro {*/
-
-
-/*    text-align: center;*/
-
-
-/*}*/
-
-
-/*.masthead {*/
-
-
-/*    padding: 6em 0;*/
-
-
-/*    background-image: url('');*/
-
-
-/*    background-size: cover;*/
-
-
-/*    background-repeat: no-repeat;*/
-
-
-/*    border-top: solid 1em #FFCF33;*/
-
-
-/*}*/
 
 .masthead-intro {
     /* Layout Declarations */
@@ -251,76 +218,6 @@ a {
         font-size: 2.5em;
     }
 }
-
-
-/* HEADER */
-
-
-/* ================================================== */
-
-
-/* Search form */
-
-
-/* Search form */
-
-
-/* ================================================== */
-
-
-/* media queries */
-
-
-/* @media (max-width: 1200px) {
-    html {
-        font-size: 60%;
-    }
-    header {
-        padding: 1rem 3rem;
-    }
-} */
-
-@media all and (max-width: 991.98px) {
-    html {
-        font-size: 55%;
-    }
-    header {
-        padding: 1rem 2rem;
-    }
-}
-
-@media all and (max-width: 767.98px) {
-    header .icons #menu-bars {
-        display: inline-block;
-    }
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-        background: #ffff;
-        padding: 1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-    header .navbar a {
-        display: block;
-        padding: 1.5rem;
-        margin: 1rem;
-        font-size: 2rem;
-        background: #f1f7ed;
-    }
-}
-
-
-/* media queries */
 
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
@@ -543,3 +440,70 @@ body {
 .booking-form .submit-btn:focus {
     opacity: 0.9
 }
+
+
+/* Search form */
+
+
+/* Search form */
+
+
+/* ================================================== */
+
+
+/* ================================================== */
+
+
+/* media queries */
+
+
+/* @media (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+    header {
+        padding: 1rem 3rem;
+    }
+} */
+
+@media all and (max-width: 991.98px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media all and (max-width: 767.98px) {
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+        background: #ffff;
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #f1f7ed;
+    }
+}
+
+
+/* media queries */
