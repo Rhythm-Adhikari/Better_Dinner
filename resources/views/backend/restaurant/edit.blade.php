@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-body">
 
-            <form action="{{route('admin.restaurant.update', $restaurant->id)}}" method="POST" id="create">
+            <form action="{{route('admin.restaurant.update', $restaurant->id)}}" method="POST" id="update">
                 @csrf
                 @method('PUT')
 

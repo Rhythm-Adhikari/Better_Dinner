@@ -17,7 +17,7 @@ class RestaurantController extends Controller
         $data = Restaurant::query();
         return Datatables::of($data)
         ->addColumn('action', function ($each) {
-            $edit_icon = '<a href="' . route('admin.user.edit', $each->id) . '" class="text-warning"><i class="fas fa-edit"></i></a>';
+            $edit_icon = '<a href="' . route('admin.restaurant.edit', $each->id) . '" class="text-warning"><i class="fas fa-edit"></i></a>';
             $delete_icon = '<a href="#" class="text-danger delete" data-id="' . $each->id . '"><i class="fas fa-trash"></i></a>';
 
             return  '<div class="action-icon">' . $edit_icon   . ' ' .   $delete_icon . '</div>';
@@ -62,7 +62,7 @@ class RestaurantController extends Controller
     public function update($id, Request $request){
         $request->validate(
             [
-                'email'=>'required'|'string'|'email'|'max:225'|'unique:restaurants' . $id
+                'email'=>'required|string|email|max:225|unique:restaurants,email,' . $id,
             ]
         );
         $restaurant=Restaurant::findOrFail($id);
