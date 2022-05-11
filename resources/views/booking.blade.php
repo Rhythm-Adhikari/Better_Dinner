@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+ <div class="boo">
     <div id="booking" class="section">
         <div class="section-center">
             <div class="container">
@@ -8,6 +9,7 @@
                         <div class="form-header">
                             <h1>Make your reservation</h1>
                         </div>
+
                         <form>
                             <div class="form-group">
                                 <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Restaurant" required>
@@ -95,10 +97,12 @@
                             <div class="form-btn">
                                 <button class="submit-btn">Book Now</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+ </div>
 @endsection

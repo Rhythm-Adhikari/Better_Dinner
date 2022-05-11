@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="git restaurant page">
+    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="git search bar and serach form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/restaurant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/restaurant.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +193,8 @@
       <workItem from="1652155338490" duration="6265000" />
       <workItem from="1652181773130" duration="2059000" />
       <workItem from="1652184250525" duration="5117000" />
-      <workItem from="1652221084933" duration="3181000" />
+      <workItem from="1652221084933" duration="5529000" />
+      <workItem from="1652230395544" duration="4552000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>
@@ -216,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652223193642</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git search bar and serach form">
+      <created>1652224353974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652224353974</updated>
+    </task>
+    <task id="LOCAL-00005" summary="git search bar and serach form">
+      <created>1652224366256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652224366256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +252,8 @@
     <MESSAGE value="final working test" />
     <MESSAGE value="grid and order test" />
     <MESSAGE value="git restaurant page" />
-    <option name="LAST_COMMIT_MESSAGE" value="git restaurant page" />
+    <MESSAGE value="git search bar and serach form" />
+    <option name="LAST_COMMIT_MESSAGE" value="git search bar and serach form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -91,12 +91,19 @@
 
                     </div>
                 </div>
+                <div class="contentse">
+                    <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our special <span
+                            style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span>
+                </div>
+
                 <div class="slide">
-                    <div class="content">
-                        <span style="font-family:  'Abhaya Libre', serif; font-weight: 700 ">Our special <span
-                                style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span>
-                    </div>
+{{--                    <div class="content">--}}
+{{--                        <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our special <span--}}
+{{--                                style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span>--}}
+{{--                    </div>--}}
+
                     @foreach ($restaurants as $restaurant)
+
                         <div class="card" style="width: 30rem">
                             <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
                             <div class="card-body">

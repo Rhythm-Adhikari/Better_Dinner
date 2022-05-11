@@ -208,6 +208,7 @@ header .icons #menu-bars {
 .home .home-slider .slide .content span {
     color: black;
     font-size: 5.5rem;
+
 }
 
 .home .home-slider .slide .content h3 {
@@ -220,6 +221,11 @@ header .icons #menu-bars {
     font-size: 2rem;
     padding: .5rem 0;
     line-height: 1.5;
+
+}
+.contentse{
+    color: black;
+    font-size: 5.5rem;
 }
 
 
@@ -337,8 +343,8 @@ a {
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
 
-body {
-    background-image: linear-gradient(to right, #c5a8d2, #f86374)
+.boo {
+    background-image: linear-gradient(to right, #d78897, #dec0c2)
 }
 
 .section {
@@ -630,9 +636,8 @@ body {
 
 /*---------------------------------CSS FOr Welcome page--------- food order------------------------------------*/
 
-.slide{
+.card{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap:1.5rem;
-
 }
