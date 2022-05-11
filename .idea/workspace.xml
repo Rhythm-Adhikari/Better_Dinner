@@ -7,8 +7,8 @@
     <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="trying to fix delete resturant CRUD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/RestaurantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restaurant/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/restaurant/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restaurant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/restaurant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,8 @@
       <workItem from="1652184250525" duration="5117000" />
       <workItem from="1652221084933" duration="5529000" />
       <workItem from="1652230395544" duration="4586000" />
-      <workItem from="1652263950113" duration="5633000" />
+      <workItem from="1652263950113" duration="10021000" />
+      <workItem from="1652275035231" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>
@@ -257,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652268646876</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="trying to fix delete resturant CRUD">
+      <created>1652269695200</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652269695200</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

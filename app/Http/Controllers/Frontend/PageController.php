@@ -17,7 +17,8 @@ class PageController extends Controller
 
 
     public function booking(){
-        return view('booking');
+        $restaurants = Restaurant::get();
+        return view('booking',compact("restaurants"));
     }
 
     public function order(){

@@ -13,13 +13,30 @@
                         <form>
                             <div class="form-group">
                                 <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Restaurant" required>
-                                    <option selected>Please Choose...</option>
 
-                                    <option>Mr lee</option>
+                                    <option selected>Please Choose your Restaurant </option>
+                                    @foreach($restaurants as $restaurant)
+
+                                    <option>
+                                        {{$restaurant->name}}
+
+                                    </option>
+                                    @endforeach
                                 </select>
                                 <span class="form-label">Restaurants</span>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Menu" required>
+
+
+                                    <option selected>Please Choose...</option>
+
+
+                                </select>
+                                <span class="form-label">Menus</span>
 
                             </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -30,7 +47,7 @@
 {{--                              this requires fixing as mobile view is kind of screwing it up --}}
                                 <div class="col-md-6">
                                     <div class="test" id="datetimepicker">
-                                        <span class="test" style="position: fixed; left: 1000px; top: 218px;"> Select time</span>
+{{--                                        <span class="test" style="position: fixed; left: 1000px; top: 218px;"> Select time</span>--}}
                                         <input class="form-control" id="timepicker" type="time" required style="position: absolute;">
 {{--                                       // <span class="form-label">Select TIme</span>--}}
                                         </span>
@@ -80,20 +97,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="Enter your Email">
-                                        <span class="form-label">Email</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="tel" placeholder="Enter you Phone">
-                                        <span class="form-label">Phone</span>
-                                    </div>
-                                </div>
-                            </div>
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <input class="form-control" type="email" placeholder="Enter your Email">--}}
+{{--                                        <span class="form-label">Email</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <input class="form-control" type="tel" placeholder="Enter you Phone">--}}
+{{--                                        <span class="form-label">Phone</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="form-btn">
                                 <button class="submit-btn">Book Now</button>
                             </div>
