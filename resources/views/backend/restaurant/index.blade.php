@@ -65,7 +65,30 @@
                     },
                 ]
             });
+            $(document).on('click', '.delete', function(e) {
+                e.preventDefault();
+
+                var id = $(this).data('id');
+
+                Swal.fire({
+                    title: 'Are you sure, you want to delete?',
+                    showCancelButton: true,
+                    confirmButtonText: 'confirm',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: '/admin/restaurant/' + id,
+                            type: 'DELETE',
+                            success: function() {
+                                table.ajax.reload();
+                            }
+                        });
+                    }
+                })
+            });
         });
+
+
 
     </script>
 @endsection
