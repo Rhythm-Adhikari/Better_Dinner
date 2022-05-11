@@ -63,7 +63,8 @@ class RestaurantController extends Controller
     {
         $request->validate(
             [
-                'email'=>'required|string|email|max:225|unique:restaurants,email,' . $id
+                'email'=>'required|string|email|max:225|unique:restaurants,email,' . $id,
+
             ]
         );
         $restaurant=Restaurant::findOrFail($id);
