@@ -22,6 +22,36 @@ class RestaurantController extends Controller
 
             return  '<div class="action-icon">' . $edit_icon   . ' ' .   $delete_icon . '</div>';
         })
+        ->rawColumns(['action'])
         ->make(true);
+
+    }
+    public function create(){
+        return view('backend.restaurant.create');
+    }
+    public function store(Request $request){
+        $request->validate(
+            [
+                'email'=>['required', 'string', 'email', 'max:225', 'unique:restaurants']
+            ]
+        );
+
+        $restaurant = new Restaurant();
+        $restaurant->name= $request->name;
+        $restaurant->location= $request->location;
+        $restaurant->phone= $request->phone;
+        $restaurant->email= $request->email;
+        $restaurant->description= $request->description;
+        $restaurant->save();
+
+        return redirect()->route('admin.restaurant.index')->with('create', "Successfully created");
+
+    }
+    public function destroy($id)
+    {
+        $restaurant= Restaurant::findOrFail($id);
+        $restaurant->delete();
+
+        return 'success';
     }
 }

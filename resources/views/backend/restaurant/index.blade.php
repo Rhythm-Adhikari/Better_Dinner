@@ -8,7 +8,7 @@
             <h1 class="h4">Restaurant table</h1>
         </div>
         <div>
-            <a href="#" class="btn btn-primary d-inline-flex align-items-center">
+            <a href="{{route('admin.restaurant.create')}}" class="btn btn-primary d-inline-flex align-items-center">
                 <i class="fas fa-plus m-2"></i>
                 Add Restaurant
             </a>
@@ -66,5 +66,6 @@
                 ]
             });
         });
+
     </script>
 @endsection
