@@ -54,4 +54,25 @@ class RestaurantController extends Controller
 
         return 'success';
     }
+
+    public function edit($id){
+        $restaurant=Restaurant::findOrFail($id);
+        return view('backend.restaurant.edit', compact('restaurant'));
+    }
+    public function update($id, Request $request){
+        $request->validate(
+            [
+                'email'=>'required'|'string'|'email'|'max:225'|'unique:restaurants' . $id
+            ]
+        );
+        $restaurant=Restaurant::findOrFail($id);
+        $restaurant->name= $request->name;
+        $restaurant->location= $request->location;
+        $restaurant->phone= $request->phone;
+        $restaurant->email= $request->email;
+        $restaurant->description= $request->description;
+        $restaurant->update();
+        return redirect()->route('admin.restaurant.index')->with('create', "Successfully created");
+
+    }
 }
