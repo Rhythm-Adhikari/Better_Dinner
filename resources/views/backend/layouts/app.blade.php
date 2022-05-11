@@ -4,12 +4,12 @@
 <head>
     <!-- Primary Meta Tags -->
     <title>@yield('title')</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Sweet Alert -->
     <link type="text/css" href="{{ asset('backend/vendor/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet">
@@ -23,8 +23,11 @@
     <!-- FOntawesome CSS -->
 
     <link rel="stylesheet" href="{{ asset('backend/fontawesome/css/all.css') }}">
+    
     {{-- Data table --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
 </head>
 
 <body>
@@ -171,11 +174,12 @@
         </footer>
     </main>
 
+    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="{{ asset('backend/vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('backend/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function() {
             let token = document.head.querySelector('meta[name = "csrf-token"]');
@@ -191,6 +195,32 @@
                 window.history.go(-1);
                 return false;
             });
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            @if(session('create'))
+            Toast.fire({
+                icon: 'success',
+                title: '{{session('create')}}'
+            });
+            @endif
+
+            @if(session('update'))
+            Toast.fire({
+                icon: 'success',
+                title: '{{session('update')}}'
+            });
+            @endif
         });
     </script>
 
