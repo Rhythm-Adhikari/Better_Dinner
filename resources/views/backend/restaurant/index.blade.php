@@ -8,7 +8,7 @@
             <h1 class="h4">Restaurant table</h1>
         </div>
         <div>
-            <a href="{{route('admin.restaurant.create')}}" class="btn btn-primary d-inline-flex align-items-center">
+            <a href="#" class="btn btn-primary d-inline-flex align-items-center">
                 <i class="fas fa-plus m-2"></i>
                 Add Restaurant
             </a>
@@ -65,30 +65,6 @@
                     },
                 ]
             });
-            $(document).on('click', '.delete', function(e) {
-                e.preventDefault();
-
-                var id = $(this).data('id');
-
-                Swal.fire({
-                    title: 'Are you sure, you want to delete?',
-                    showCancelButton: true,
-                    confirmButtonText: 'confirm',
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        $.ajax({
-                            url: '/admin/restaurant/' + id,
-                            type: 'DELETE',
-                            success: function() {
-                                table.ajax.reload();
-                            }
-                        });
-                    }
-                })
-            });
         });
-
-
-
     </script>
 @endsection
