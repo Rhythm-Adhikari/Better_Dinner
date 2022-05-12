@@ -40,7 +40,9 @@
                                     <span class="font-weight-bold">{{ $menu->description }}</span>
                                 </td>
                                 <td class="border-0">
-                                   <i class="fas fa-edit"></i>
+                                    <a href= {{route('admin.menu.edit', $menu->id )}}>
+                                        <i class="fas fa-edit"></i>
+                                    </a>
                                    <i class="fas fa-trash"></i>
                                 </td>
                             </tr>
