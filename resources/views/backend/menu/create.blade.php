@@ -63,37 +63,3 @@
 
 
 @endsection
-{{--@section('scripts')--}}
-{{--    <script>--}}
-{{--        $(document).ready(function() {--}}
-{{--            var table = $('.Datatable').DataTable({--}}
-{{--                processing: true,--}}
-{{--                serverSide: true,--}}
-{{--                ajax: "/admin/restaurant/menu/datatable/ssd",--}}
-{{--                columns: [{--}}
-{{--                    data: "restaurant_id",--}}
-{{--                    name: "restaurant id"--}}
-{{--                },--}}
-{{--                    {--}}
-{{--                        data: "name",--}}
-{{--                        name: "name"--}}
-{{--                    },--}}
-{{--                    {--}}
-{{--                        data: "description",--}}
-{{--                        name: "description",--}}
-{{--                    },--}}
-{{--                    {--}}
-{{--                        data: "price",--}}
-{{--                        name: "price",--}}
-{{--                    },--}}
-{{--                    {--}}
-{{--                        data: "action",--}}
-{{--                        name: "action",--}}
-{{--                    },--}}
-{{--                ]--}}
-{{--            });--}}
-
-{{--        });--}}
-{{--   </script>--}}
-
-{{--@endsection--}}
