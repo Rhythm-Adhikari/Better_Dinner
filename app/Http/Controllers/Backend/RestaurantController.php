@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use App\Models\Restaurant;
-use Yajra\Datatables\Datatables;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class RestaurantController extends Controller
 {
@@ -25,11 +27,15 @@ class RestaurantController extends Controller
         })
         ->rawColumns(['action'])
         ->make(true);
+        
 
     }
+    
+    
 
-    public function show(){
-        return view('backend.menu.index');
+    public function show($id){
+        $menus =  DB::table('menus')->where('restaurant_id', $id)->get();
+        return view('backend.menu.index',compact('menus'));
     }
     public function create(){
         return view('backend.restaurant.create');
