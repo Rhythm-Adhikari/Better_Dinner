@@ -25,7 +25,8 @@ class PageController extends Controller
 
     public function order()
     {
-        return view('order');
+        $restaurants = Restaurant::get();
+        return view('order', compact("restaurants"));
     }
 
     public function restaurant()
@@ -62,7 +63,7 @@ class PageController extends Controller
                 'quantity'=>1,
                 'price'=>$menu->price,
             ];
-            
+
         }
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
