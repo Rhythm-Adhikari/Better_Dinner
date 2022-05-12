@@ -26,7 +26,7 @@
                     <p>{{$menu->description}}</p>
                     <h4 class="price">{{$menu->price}}</h4>
                     <a href="{{ route('add.to.cart', $menu->id) }}" class="btn">add to cart</a>
-                    
+
                 </div>
             </div>
             @endforeach

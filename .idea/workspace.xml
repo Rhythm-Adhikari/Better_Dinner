@@ -4,11 +4,14 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="trying to fix delete resturant CRUD">
+    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="order issue">
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/menu/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/order.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/restaurant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/restaurant.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/restaurant/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/restaurant/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/restaurant/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/restaurant/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menus.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +211,8 @@
       <workItem from="1652230395544" duration="4586000" />
       <workItem from="1652263950113" duration="10021000" />
       <workItem from="1652275035231" duration="682000" />
-      <workItem from="1652344821253" duration="2986000" />
+      <workItem from="1652344821253" duration="3374000" />
+      <workItem from="1652348444348" duration="5070000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>
@@ -280,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652275665734</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="order issue">
+      <created>1652347850836</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652347850836</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +315,8 @@
     <MESSAGE value="git search bar and serach form" />
     <MESSAGE value="git minor fixes" />
     <MESSAGE value="trying to fix delete resturant CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to fix delete resturant CRUD" />
+    <MESSAGE value="order issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="order issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
