@@ -43,7 +43,7 @@
                 <a href="{{ route('restaurant') }}">restaurants</a>
                 <a href="{{ route('menus') }}">Order</a>
                 <a href="{{ route('booking') }}">Booking</a>
-                <a href="{{ route('about') }}">About</a>
+                <a href="{{ route('about') }}">About Us</a>
             </nav>
 
             <div class="icons">
