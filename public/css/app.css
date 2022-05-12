@@ -632,6 +632,13 @@ a {
     gap:1.5rem;
 }
 
+/*restaurant*/
+.restaurant .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 5fr));
+    gap:1.5rem;
+}
+
 /* media queries */
 
 /*---------------------------------CSS FOr Welcome page--------- food order------------------------------------*/
