@@ -26,7 +26,7 @@ Route::prefix('admin')->name('admin.')->namespace('Backend')->middleware('auth:a
     // Route::get('admin/restaurant/menu-page/{id}','RestaurantController@menuPage')->name('menu-page');
 
     Route::get('menu/datatable/ssd','MenuController@ssd');
-    Route::resource('menu','restaurantController');
+    Route::resource('menu','MenuController');
 
 
   
