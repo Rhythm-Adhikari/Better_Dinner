@@ -50,8 +50,8 @@ class PageController extends Controller
         return view('cart');
     }
 
-    public function addtoCart($id){
-        $menu=Menu::findOrfail();
+    public function addToCart($id){
+        $menu=Menu::findOrFail($id);
         $cart= session()->get('cart',[]);
 
         if(isset($cart[$id])){

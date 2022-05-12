@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
     --primary: #e84857;
@@ -39,17 +39,17 @@ section:nth-child(even) {
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.7rem;
-    color: #F7EDE1;
+    color: #f7ede1;
     background: #e84857;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    padding: .8rem 3rem;
+    padding: 0.8rem 3rem;
 }
 
 .btn:hover {
     color: #ffffff;
     background: #1c3557;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -141,7 +141,7 @@ header .icons #menu-bars {
     height: 100%;
     width: 100%;
     z-index: 1004;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +154,7 @@ header .icons #menu-bars {
 
 #search-form #search-box {
     width: 50rem;
-    border-bottom: .1rem solid #fff;
+    border-bottom: 0.1rem solid #fff;
     padding: 1rem 0;
     color: #fff;
     font-size: 3rem;
@@ -225,7 +225,7 @@ header .icons #menu-bars {
 .home .home-slider .slide .content p {
     color: var(--light-color);
     font-size: 2rem;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     line-height: 1.5;
 }
 
@@ -315,14 +315,14 @@ section>h1 {
 }
 
 .content-footer>p3 {
-    color: #F7EDE1;
+    color: #f7ede1;
     opacity: 1;
 }
 
 a {
     font-weight: bold;
     text-decoration: none;
-    color: #F1C863;
+    color: #f1c863;
     opacity: 1;
 }
 
@@ -364,7 +364,7 @@ a {
 }
 
 .main-section {
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
 }
 
 .dropdown {
@@ -417,7 +417,7 @@ a {
 }
 
 .cart-detail .count {
-    color: #C2C2DC;
+    color: #c2c2dc;
 }
 
 .checkout {
@@ -439,16 +439,22 @@ a {
     border-bottom-color: #fff;
 }
 
+header .icons .dropdown .cart-count {
+    position: absolute;
+    left: 35px;
+    top: 7px;
+}
+
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
 
 .boo {
-    background-image: linear-gradient(to right, #d78897, #dec0c2)
+    background-image: linear-gradient(to right, #d78897, #dec0c2);
 }
 
 .section {
     position: relative;
-    height: 100vh
+    height: 100vh;
 }
 
 .section .section-center {
@@ -457,11 +463,11 @@ a {
     left: 0;
     right: 0;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%)
+    transform: translateY(-50%);
 }
 
 #booking {
-    font-family: 'Raleway', sans-serif
+    font-family: "Raleway", sans-serif;
 }
 
 .booking-form {
@@ -474,24 +480,24 @@ a {
     background-image: url("/img/logo.png");
     background-size: cover;
     border-radius: 5px;
-    z-index: 20
+    z-index: 20;
 }
 
 .booking-form::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
     background: rgba(105, 49, 49, 0.7);
-    z-index: -1
+    z-index: -1;
 }
 
 .booking-form .form-header {
     text-align: center;
     position: relative;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .booking-form .form-header h1 {
@@ -499,12 +505,12 @@ a {
     text-transform: capitalize;
     font-size: 42px;
     margin: 0px;
-    color: #fff
+    color: #fff;
 }
 
 .booking-form .form-group {
     position: relative;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .booking-form .form-control {
@@ -517,7 +523,7 @@ a {
     -webkit-box-shadow: 0px 0px 0px 2px transparent;
     box-shadow: 0px 0px 0px 2px transparent;
     -webkit-transition: 0.2s;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
 .custom-select {
@@ -530,47 +536,47 @@ a {
     -webkit-box-shadow: 0px 0px 0px 2px transparent;
     box-shadow: 0px 0px 0px 2px transparent;
     -webkit-transition: 0.2s;
-    transition: 0.2s
+    transition: 0.2s;
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form .form-control:focus {
     -webkit-box-shadow: 0px 0px 0px 2px #ff8846;
-    box-shadow: 0px 0px 0px 2px #ff8846
+    box-shadow: 0px 0px 0px 2px #ff8846;
 }
 
 .booking-form input[type="date"].form-control {
-    padding-top: 16px
+    padding-top: 16px;
 }
 
 .booking-form input[type="date"].form-control:invalid {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form input[type="date"].form-control+.form-label {
     opacity: 1;
-    top: 10px
+    top: 10px;
 }
 
 .booking-form select.form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none
+    appearance: none;
 }
 
 .booking-form select.form-control:invalid {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking-form select.form-control+.select-arrow {
@@ -585,18 +591,18 @@ a {
     text-align: center;
     pointer-events: none;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 14px
+    font-size: 14px;
 }
 
 .booking-form select.form-control+.select-arrow:after {
-    content: '\279C';
+    content: "\279C";
     display: block;
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg)
+    transform: rotate(90deg);
 }
 
 .booking-form select.form-control option {
-    color: #000
+    color: #000;
 }
 
 .booking-form .form-label {
@@ -612,7 +618,7 @@ a {
     height: 15px;
     line-height: 15px;
     -webkit-transition: 0.2s all;
-    transition: 0.2s all
+    transition: 0.2s all;
 }
 
 .test {
@@ -628,16 +634,16 @@ a {
     height: 15px;
     line-height: 15px;
     -webkit-transition: 0.2s all;
-    transition: 0.2s all
+    transition: 0.2s all;
 }
 
 .booking-form .form-group.input-not-empty .form-control {
-    padding-top: 16px
+    padding-top: 16px;
 }
 
 .booking-form .form-group.input-not-empty .form-label {
     opacity: 0.5;
-    top: 10px
+    top: 10px;
 }
 
 .booking-form .submit-btn {
@@ -653,12 +659,12 @@ a {
     font-size: 16px;
     letter-spacing: 1.3px;
     -webkit-transition: 0.2s all;
-    transition: 0.2s all
+    transition: 0.2s all;
 }
 
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
-    opacity: 0.9
+    opacity: 0.9;
 }
 
 
@@ -739,26 +745,33 @@ a {
         background: #f1f7ed;
     }
 }
+
+
 /*-------------------------------------------test order css-----------------------------------------------*/
-.menu .box-container{
+
+.menu .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
+
 /*restaurant*/
-.restaurant .box-container{
+
+.restaurant .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 5fr));
-    gap:1.5rem;
+    gap: 1.5rem;
 }
+
 
 /* media queries */
 
+
 /*---------------------------------CSS FOr Welcome page--------- food order------------------------------------*/
 
-.card{
+.card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap:1.5rem;
+    gap: 1.5rem;
 }
