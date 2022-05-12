@@ -19,12 +19,17 @@ class RestaurantController extends Controller
         ->addColumn('action', function ($each) {
             $edit_icon = '<a href="' . route('admin.restaurant.edit', $each->id) . '" class="text-warning"><i class="fas fa-edit"></i></a>';
             $delete_icon = '<a href="#" class="text-danger delete" data-id="' . $each->id . '"><i class="fas fa-trash"></i></a>';
+            $menu_icon = '<a href="' . route('admin.restaurant.show' , $each->id) . '" class="text-warning"><i class="fas fa-book"></i></a>';
 
-            return  '<div class="action-icon">' . $edit_icon   . ' ' .   $delete_icon . '</div>';
+            return  '<div class="action-icon">' . $edit_icon   . ' ' .   $delete_icon . ' ' .   $menu_icon . '</div>';
         })
         ->rawColumns(['action'])
         ->make(true);
 
+    }
+
+    public function show(){
+        return view('backend.menu.index');
     }
     public function create(){
         return view('backend.restaurant.create');
