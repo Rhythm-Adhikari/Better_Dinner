@@ -11,32 +11,60 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
-    public function about(){
+    public function about()
+    {
         return view('about');
     }
 
 
-    public function booking(){
+    public function booking()
+    {
         $restaurants = Restaurant::get();
-        return view('booking',compact("restaurants"));
+        return view('booking', compact("restaurants"));
     }
 
-    public function order(){
+    public function order()
+    {
         return view('order');
     }
 
-    public function restaurant(){
+    public function restaurant()
+    {
         $restaurants = Restaurant::get();
-        return view('restaurant',compact("restaurants"));
+        return view('restaurant', compact("restaurants"));
     }
 
-    public function menu($restaurant_id){
-    $menus = DB::table('menus')->where('restaurant_id',$restaurant_id )->get();
-    return view('order', compact('menus'));
+    public function menu($restaurant_id)
+    {
+        $menus = DB::table('menus')->where('restaurant_id', $restaurant_id)->get();
+        return view('order', compact('menus'));
     }
 
-    public function menus(){
+    public function menus()
+    {
         $menus = Menu::with('restaurant')->get();
         return view('menus', compact('menus'));
+    }
+
+    public function cart(){
+        return view('cart');
+    }
+
+    public function addtoCart($id){
+        $menu=Menu::findOrfail();
+        $cart= session()->get('cart',[]);
+
+        if(isset($cart[$id])){
+            $cart[$id]['quantity']++;
+        }else{
+            $cart[$id]=[
+                'name'=>$menu->name,
+                'quantity'=>1,
+                'price'=>$menu->price,
+            ];
+            
         }
+        session()->put('cart', $cart);
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
+    }
 }

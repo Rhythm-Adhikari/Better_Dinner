@@ -38,10 +38,10 @@
 
             <nav class="navbar">
                 <a class="active" href="{{ url('/') }}">Home</a>
-                <a href="{{route('restaurant')}}">restaurants</a>
-                <a href="{{route('menus')}}">Order</a>
-                <a href="{{route('booking')}}">Booking</a>
-                <a href="{{route('about')}}">About</a>
+                <a href="{{ route('restaurant') }}">restaurants</a>
+                <a href="{{ route('menus') }}">Order</a>
+                <a href="{{ route('booking') }}">Booking</a>
+                <a href="{{ route('about') }}">About</a>
             </nav>
 
             <div class="icons">
@@ -56,7 +56,10 @@
                         <label for="search-box" class="fas fa-search"></label>
                         <i class="fas fa-times" id="close"></i>
                     </form>
-                    <a href='#' class="fas fa-shopping-cart"></a>
+                    <div class="dropdown">
+                        <a class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></a> <span
+                            class="badge badge-pill badge-danger" style="padding-top:3px ">{{ count((array) session('cart')) }}</span>
+                    </div>
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>
 
@@ -79,25 +82,25 @@
         </section>
     </div>
 
-{{--    <script>--}}
-{{--        document.querySelector('#search-icon').onclick = () =>{--}}
-{{--            document.querySelector('#search-form').classList.toggle('active');--}}
-{{--        }--}}
+    {{-- <script> --}}
+    {{-- document.querySelector('#search-icon').onclick = () =>{ --}}
+    {{-- document.querySelector('#search-form').classList.toggle('active'); --}}
+    {{-- } --}}
 
-{{--        document.querySelector('#close').onclick = () =>{--}}
-{{--            document.querySelector('#search-form').classList.remove('active');--}}
-{{--        }--}}
-{{--        function loader(){--}}
-{{--            document.querySelector('.loader-container').classList.add('fade-out');--}}
-{{--        }--}}
+    {{-- document.querySelector('#close').onclick = () =>{ --}}
+    {{-- document.querySelector('#search-form').classList.remove('active'); --}}
+    {{-- } --}}
+    {{-- function loader(){ --}}
+    {{-- document.querySelector('.loader-container').classList.add('fade-out'); --}}
+    {{-- } --}}
 
-{{--        function fadeOut(){--}}
-{{--            setInterval(loader, 3000);--}}
-{{--        }--}}
+    {{-- function fadeOut(){ --}}
+    {{-- setInterval(loader, 3000); --}}
+    {{-- } --}}
 
-{{--        window.onload = fadeOut;--}}
+    {{-- window.onload = fadeOut; --}}
 
-{{--    </script>--}}
+    {{-- </script> --}}
 
 
 
