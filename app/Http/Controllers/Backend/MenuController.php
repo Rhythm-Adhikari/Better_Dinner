@@ -14,18 +14,16 @@ class MenuController extends Controller
     public function index(){
         return view('backend.restaurant.index');
     }
-    public function create()
-    {
+    public function create(){
         $restaurants = Restaurant::get();
-        return view('backend.menu.create', compact("restaurants"));
+        return view('backend.menu.create',compact("restaurants"));
     }
 
 
 
 
-
     public function store(Request $request){
-//
+//       
 
         $menu = new menu();
         $menu->restaurant_id= $request->restaurant_id;
