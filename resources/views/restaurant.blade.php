@@ -4,25 +4,23 @@
     <section class="restaurant" id="restaurant">
 
         <h3 class="sub-heading"> Our Partners </h3>
-        <h1 class="heading"> Our Partners </h1>
+        <h1 class="heading"> Today's Top 10 </h1>
 
-        <div class="box-container">
+        <div class="slide">
+            <div class="content"> <span>Our special <span style="color: #e84857; font-weight: 700">Restaurants</span></span></div>
             @foreach ($restaurants as $restaurant)
-                <div class="image">
+                <div class="card" style="width: 30rem">
                     <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 2.5rem">{{$restaurant->name}}</h5>
+                        <p class="card-text">{{$restaurant->description}}</p>
+                        <a href="{{route('menu',$restaurant->id)}}" class="btn btn-primary">Order Now</a>
                     </div>
-                    <h5 class="card-title" style="font-size: 2.5rem">{{$restaurant->name}}</h5>
-                     <p class="card-text">{{$restaurant->description}}</p>
-                     <a href="{{route('menu',$restaurant->id)}}" class="btn btn-primary">Order Now</a>
                 </div>
             @endforeach
+
+
+
         </div>
 
     </section>
