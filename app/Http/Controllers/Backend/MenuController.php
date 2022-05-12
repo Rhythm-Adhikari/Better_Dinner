@@ -11,8 +11,9 @@ use App\Http\Controllers\Controller;
 
 class MenuController extends Controller
 {
-    
-
+    public function index(){
+        return view('backend.restaurant.index');
+    }
 
     // public function ssd($id)
     // {
@@ -30,7 +31,26 @@ class MenuController extends Controller
     //         ->make(true);
     // }
 
-    public function create(){
+    public function create()
+    {
         return view('backend.menu.create');
+    }
+
+    public function edit($id)
+    {
+        $menu = Menu::findOrFail($id);
+        return view('backend.menu.edit', compact('menu'));
+    }
+
+    public function update($id, Request $request)
+    {
+
+        $menu = Menu::findOrFail($id);
+        $menu->name = $request->name;
+        $menu->price = $request->price;
+        $menu->description = $request->description;
+        $menu->update();
+
+        return redirect()->route('admin.menu.index')->with('create', "Successfully updated");
     }
 }
