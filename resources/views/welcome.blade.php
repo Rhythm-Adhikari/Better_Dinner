@@ -58,7 +58,12 @@
                         <label for="search-box" class="fas fa-search"></label>
                         <i class="fas fa-times" id="close"></i>
                     </form>
-                    <a href='#' class="fas fa-shopping-cart"></a>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-info" data-toggle="dropdown">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i> Cart <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
+                        </button>
+                    </div>
+
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>
 
@@ -92,18 +97,18 @@
                     </div>
                 </div>
                 <div class="contentse">
-                    <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our special <span
+                    <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our
+                        special <span
                             style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span>
                 </div>
 
                 <div class="slide">
-{{--                    <div class="content">--}}
-{{--                        <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our special <span--}}
-{{--                                style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span>--}}
-{{--                    </div>--}}
+                    {{-- <div class="content"> --}}
+                    {{-- <span class="testo" style="font-family:  'Abhaya Libre', serif; font-weight: 700">Our special <span --}}
+                    {{-- style="color: #e84857; ;font-family:  'Abhaya Libre', serif; font-weight: 700">Restaurants</span></span> --}}
+                    {{-- </div> --}}
 
                     @foreach ($restaurants as $restaurant)
-
                         <div class="card" style="width: 30rem">
                             <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
                             <div class="card-body">

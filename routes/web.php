@@ -39,13 +39,17 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//    user booking and registration
+
     Route::get('/booking','PageController@booking')->name('booking');
     Route::get('/order','PageController@order')->name('order');
     Route::get('/restaurant','PageController@restaurant')->name('restaurant');
-
     Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
-
     Route::get('menus', 'PageController@menus')->name('menus');
+
+    // cart
+    Route::get('cart','PageController@cart')->name('cart');
+    Route::get('add-to-cart','PageController@addToCart')->name('add.to.cart');
+
+
 
 });
