@@ -4,8 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="menu CRUD fixed">
+    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="menu controllee and menu create issue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/menu/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +21,6 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -212,8 +210,7 @@
       <workItem from="1652263950113" duration="10021000" />
       <workItem from="1652275035231" duration="682000" />
       <workItem from="1652344821253" duration="3374000" />
-      <workItem from="1652348444348" duration="11027000" />
-      <workItem from="1652362477752" duration="338000" />
+      <workItem from="1652348444348" duration="10224000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>
@@ -306,21 +303,7 @@
       <option name="project" value="LOCAL" />
       <updated>1652358097047</updated>
     </task>
-    <task id="LOCAL-00014" summary="menu CRUD fixed">
-      <created>1652361082242</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1652361082242</updated>
-    </task>
-    <task id="LOCAL-00015" summary="menu CRUD fixed">
-      <created>1652361381524</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1652361381524</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,8 +329,7 @@
     <MESSAGE value="trying to fix delete resturant CRUD" />
     <MESSAGE value="order issue" />
     <MESSAGE value="menu controllee and menu create issue" />
-    <MESSAGE value="menu CRUD fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu CRUD fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu controllee and menu create issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

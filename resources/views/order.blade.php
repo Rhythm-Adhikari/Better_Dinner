@@ -23,7 +23,7 @@
                     </div>
                     <h3>{{$menu->name}}</h3>
                     <p>{{$menu->description}}</p>
-                    <a href="#" class="btn">add to cart</a>
+                    <a href="{{ route('add.to.cart', $menu->id) }}" class="btn">add to cart</a>
                     <span class="price">{{$menu->price}}</span>
                 </div>
             </div>
