@@ -62,9 +62,9 @@
                             class="badge badge-pill badge-danger cart-count">{{ count((array) session('cart')) }}</span>
                             <div class="dropdown-menu">
                                 <div class="row total-header-section">
-                                    <div class="col-lg-6 col-sm-6 col-6">
+                                    {{-- <div class="col-lg-6 col-sm-6 col-6">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
-                                    </div>
+                                    </div> --}}
                                     @php $total = 0 @endphp
                                     @foreach((array) session('cart') as $id => $details)
                                         @php $total += $details['price'] * $details['quantity'] @endphp
@@ -86,11 +86,10 @@
                                         </div>
                                     @endforeach
                                 @endif
-                                <div class="row">
-                                    <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                                        <a href="{{ route('cart') }}" class="btn btn-primary btn-block">View all</a>
-                                    </div>
-                                </div>
+                               
+                                        <a href="{{ route('cart') }}" class="btn btn-primary">View all</a>
+                                    
+                                
                             </div>
                     </div>
                     

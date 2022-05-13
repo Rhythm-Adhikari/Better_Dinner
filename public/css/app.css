@@ -372,11 +372,13 @@ a {
     padding-right: 30px;
 }
 
-.btn {
+
+/* .btn {
     border: 0px;
     margin: 10px 0px;
     box-shadow: none !important;
-}
+    text-align: center;
+} */
 
 .dropdown .dropdown-menu {
     padding: 20px;
@@ -425,10 +427,12 @@ a {
     padding-top: 15px;
 }
 
-.checkout .btn-primary {
-    border-radius: 50px;
+
+/* .checkout .btn-primary {
+    border-radius: 10px;
     height: 50px;
-}
+    width: 5.5rem;
+} */
 
 .dropdown-menu:before {
     content: " ";
@@ -440,6 +444,12 @@ a {
 }
 
 header .icons .dropdown .cart-count {
+    position: absolute;
+    left: 35px;
+    top: 7px;
+}
+
+header .icons a .btn {
     position: absolute;
     left: 35px;
     top: 7px;
