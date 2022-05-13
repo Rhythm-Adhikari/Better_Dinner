@@ -233,6 +233,7 @@ header .icons #menu-bars {
 
 .about {
     background-color: beige;
+    width: auto;
 }
 
 .me {
@@ -240,22 +241,24 @@ header .icons #menu-bars {
     background-repeat: no-repeat;
     background-color: beige;
     background-position: center;
-    opacity: 0.6;
+    /* opacity: 0.6; */
 }
+
 
 .masthead-intro {
     /* Layout Declarations */
     margin-bottom: 0.1em;
     /* Typography Declarations */
     font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 5em;
+    font-size: 10em;
     opacity: 1;
 }
 
 .introduction-section,
 .location-section,
 .questions-section {
-    max-width: 38em;
+   
+    max-width: 50em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
@@ -267,7 +270,7 @@ header .icons #menu-bars {
 .questions-section,
 .content-footer>p {
     /* Typography Declarations */
-    font-size: 103%;
+    font-size: 203%;
     letter-spacing: 0.05em;
     font-weight: bolder;
     color: #000000;
@@ -338,8 +341,163 @@ a {
     section>h1 {
         font-size: 2.5em;
     }
+} */
+/*hbhkjbkbkbkkbkjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+.home{
+    background-color: beige;
 }
-
+.u-section-1 .u-sheet-1 {
+    background-color: beige;
+    min-height: 720px;
+  }
+  
+  .u-section-1 .u-layout-wrap-1 {
+    margin-top: 60px;
+    margin-bottom: -232px;
+    margin-left: auto;
+  }
+  
+  .u-section-1 .u-image-1 {
+    min-height: 600px;
+    background-image: url("images/pexels-pixabay-259239.jpg");
+    background-position: 50% 50%;
+  }
+  
+  .u-section-1 .u-container-layout-1 {
+    padding: 30px;
+  }
+  
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 600px;
+  }
+  
+  .u-section-1 .u-container-layout-2 {
+    padding: 30px 60px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    font-weight: 700;
+    font-size: 3rem;
+    font-style: normal;
+    text-transform: none;
+    margin: 51px auto 0 0;
+  }
+  
+  .u-section-1 .u-line-1 {
+    width: 360px;
+    height: 0;
+    margin: 19px auto 0 0;
+  }
+  
+  .u-section-1 .u-text-2 {
+    letter-spacing: 0px;
+    line-height: 2;
+    font-size: 3rem;
+    margin: 43px 0 0;
+  }
+  
+  .u-section-1 .u-btn-1 {
+    border-style: none;
+    font-weight: 700;
+    font-size: 1.875rem;
+    letter-spacing: 1px;
+    margin: 19px auto 0 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 663px;
+    }
+  
+    .u-section-1 .u-layout-wrap-1 {
+      margin-bottom: -184px;
+      margin-left: initial;
+    }
+  
+    .u-section-1 .u-image-1 {
+      min-height: 495px;
+    }
+  
+    .u-section-1 .u-layout-cell-2 {
+      min-height: 495px;
+    }
+  
+    .u-section-1 .u-text-1 {
+      margin-top: 0;
+    }
+  
+    .u-section-1 .u-line-1 {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 727px;
+    }
+  
+    .u-section-1 .u-layout-wrap-1 {
+      margin-bottom: -4px;
+      margin-left: initial;
+    }
+  
+    .u-section-1 .u-image-1 {
+      min-height: 379px;
+    }
+  
+    .u-section-1 .u-layout-cell-2 {
+      min-height: 100px;
+    }
+  
+    .u-section-1 .u-container-layout-2 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    .u-section-1 .u-line-1 {
+      width: 300px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 1081px;
+    }
+  
+    .u-section-1 .u-layout-wrap-1 {
+      margin-bottom: 60px;
+      margin-left: initial;
+    }
+  
+    .u-section-1 .u-image-1 {
+      min-height: 569px;
+    }
+  
+    .u-section-1 .u-container-layout-1 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .u-section-1 .u-container-layout-2 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 870px;
+    }
+  
+    .u-section-1 .u-image-1 {
+      min-height: 358px;
+    }
+  
+    .u-section-1 .u-text-1 {
+      font-size: 1.5rem;
+    }
+  }
 
 /*---------------------------------------------------Booking Page css---------------------------------------------------------------------------------*/
 
