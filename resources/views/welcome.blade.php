@@ -36,7 +36,7 @@
     <div id="app">
         {{-- Header section --}}
         <header>
-            <a href="{{ url('/') }}" class="logo">Better Dinner</a>
+            <a href="{{ url('/') }}" class="logo">Better Dinner.</a>
 
             <nav class="navbar">
                 <a class="" href="{{ url('/') }}">Home</a>
