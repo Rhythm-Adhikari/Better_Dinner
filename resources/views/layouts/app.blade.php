@@ -38,10 +38,10 @@
 
             <nav class="navbar">
                 <a class="active" href="{{ url('/') }}">Home</a>
-                <a href="{{route('restaurant')}}">restaurants</a>
-                <a href="{{route('menus')}}">Order</a>
-                <a href="{{route('booking')}}">Booking</a>
-                <a href="{{route('about')}}">About</a>
+                <a href="{{ route('restaurant') }}">restaurants</a>
+                <a href="{{ route('menus') }}">Order</a>
+                <a href="{{ route('booking') }}">Booking</a>
+                <a href="{{ route('about') }}">About</a>
             </nav>
 
             <div class="icons">
@@ -56,7 +56,46 @@
                         <label for="search-box" class="fas fa-search"></label>
                         <i class="fas fa-times" id="close"></i>
                     </form>
-                    <a href='#' class="fas fa-shopping-cart"></a>
+
+                    <div class="dropdown">
+                        <i class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></i> <span
+                            class="badge badge-pill badge-danger cart-count">{{ count((array) session('cart')) }}</span>
+                            <div class="dropdown-menu">
+                                <div class="row total-header-section">
+                                    <div class="col-lg-6 col-sm-6 col-6">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge badge-pill badge-danger">{{ count((array) session('cart')) }}</span>
+                                    </div>
+                                    @php $total = 0 @endphp
+                                    @foreach((array) session('cart') as $id => $details)
+                                        @php $total += $details['price'] * $details['quantity'] @endphp
+                                    @endforeach
+                                    <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                        <p>Total: <span class="text-info">$ {{ $total }}</span></p>
+                                    </div>
+                                </div>
+                                @if(session('cart'))
+                                    @foreach(session('cart') as $id => $details)
+                                        <div class="row cart-detail">
+                                            {{-- <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                                <img src="{{ $details['image'] }}" />
+                                            </div> --}}
+                                            <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                                <p>{{ $details['name'] }}</p>
+                                                <span class="price text-info"> ${{ $details['price'] }}</span> <span class="count"> Quantity:{{ $details['quantity'] }}</span>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                                        <a href="{{ route('cart') }}" class="btn btn-primary btn-block">View all</a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+
+
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>
 
@@ -79,25 +118,25 @@
         </section>
     </div>
 
-{{--    <script>--}}
-{{--        document.querySelector('#search-icon').onclick = () =>{--}}
-{{--            document.querySelector('#search-form').classList.toggle('active');--}}
-{{--        }--}}
+    {{-- <script> --}}
+    {{-- document.querySelector('#search-icon').onclick = () =>{ --}}
+    {{-- document.querySelector('#search-form').classList.toggle('active'); --}}
+    {{-- } --}}
 
-{{--        document.querySelector('#close').onclick = () =>{--}}
-{{--            document.querySelector('#search-form').classList.remove('active');--}}
-{{--        }--}}
-{{--        function loader(){--}}
-{{--            document.querySelector('.loader-container').classList.add('fade-out');--}}
-{{--        }--}}
+    {{-- document.querySelector('#close').onclick = () =>{ --}}
+    {{-- document.querySelector('#search-form').classList.remove('active'); --}}
+    {{-- } --}}
+    {{-- function loader(){ --}}
+    {{-- document.querySelector('.loader-container').classList.add('fade-out'); --}}
+    {{-- } --}}
 
-{{--        function fadeOut(){--}}
-{{--            setInterval(loader, 3000);--}}
-{{--        }--}}
+    {{-- function fadeOut(){ --}}
+    {{-- setInterval(loader, 3000); --}}
+    {{-- } --}}
 
-{{--        window.onload = fadeOut;--}}
+    {{-- window.onload = fadeOut; --}}
 
-{{--    </script>--}}
+    {{-- </script> --}}
 
 
 
