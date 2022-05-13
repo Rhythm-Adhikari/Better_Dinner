@@ -113,7 +113,10 @@
         <section class="home" id="home">
             <div class="home-slider">
                 <div class="wrapper">
-                    @yield('content')
+                    <div class="slide">
+
+                        @yield('content')
+                    </div>
                 </div>
             </div>
         </section>

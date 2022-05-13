@@ -44,6 +44,7 @@ section:nth-child(even) {
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.8rem 3rem;
+    border-style: none;
 }
 
 .btn:hover {
