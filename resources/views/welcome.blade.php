@@ -71,7 +71,7 @@
                                     @foreach((array) session('cart') as $id => $details)
                                         @php $total += $details['price'] * $details['quantity'] @endphp
                                     @endforeach
-                                    <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                    <div class="col-lg-6 col-sm-6 col-6 total-section text-center" style="font-size: 1.5rem">
                                         <p>Total: <span class="text-info">$ {{ $total }}</span></p>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@
                                 @endif
                                 <div class="row">
                                     <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                                        <a href="{{ route('cart') }}" class="btn btn-primary">View all</a>
+                                        <a href="{{ route('cart') }}" class="button">View all</a>
                                     </div>
                                 </div>
                             </div>
