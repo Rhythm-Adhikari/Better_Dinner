@@ -214,7 +214,7 @@ header .icons #menu-bars {
 
 .home .home-slider .slide .content span {
     color: black;
-    font-size: 5.5rem;
+    font-size: 1.2rem;
 }
 
 .home .home-slider .slide .content h3 {
@@ -236,9 +236,6 @@ header .icons #menu-bars {
 
 
 /*--------------------------------------About Us--------------------------------------------------------------------------*/
-
-
-
 
 a {
     text-decoration: none;
@@ -582,7 +579,7 @@ a:hover {
         font-size: 2.5em;
     }
 }
-/*hbhkjbkbkbkkbkjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
+/*indivisaul menu orders*/
 .home{
     background-color: beige;
 }

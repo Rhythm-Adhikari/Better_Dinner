@@ -117,9 +117,7 @@
 
                         @yield('content')
                     </div>
-                    <div class="slide">
-                    @yield('content')
-                    </div>
+
                 </div>
 
             </div>
