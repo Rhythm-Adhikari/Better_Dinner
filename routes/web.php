@@ -32,6 +32,8 @@ Route::get('/', function () {
 });
 
 Route::get('/about','Frontend\PageController@about')->name('about');
+Route::get('/policy','Frontend\PageController@policy')->name('policy');
+Route::get('/tc','Frontend\PageController@tc')->name('tc');
 //User Auth
 Auth::routes();
 
@@ -45,6 +47,7 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     Route::get('/restaurant','PageController@restaurant')->name('restaurant');
     Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
     Route::get('menus', 'PageController@menus')->name('menus');
+
 
     // cart
     Route::get('cart','PageController@cart')->name('cart');

@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="menu controllee and menu create issue">
+      <change afterPath="$PROJECT_DIR$/resources/views/policy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tc.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/MenuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/menu/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +186,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\Better_Dinner\resources\views" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -211,6 +222,8 @@
       <workItem from="1652275035231" duration="682000" />
       <workItem from="1652344821253" duration="3374000" />
       <workItem from="1652348444348" duration="10224000" />
+      <workItem from="1652439580107" duration="9586000" />
+      <workItem from="1652486665132" duration="11604000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>

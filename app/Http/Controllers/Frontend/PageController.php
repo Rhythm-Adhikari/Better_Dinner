@@ -15,6 +15,14 @@ class PageController extends Controller
     {
         return view('about');
     }
+    public function policy()
+    {
+        return view('policy');
+    }
+    public function tc()
+    {
+        return view('tc');
+    }
 
 
     public function booking()
