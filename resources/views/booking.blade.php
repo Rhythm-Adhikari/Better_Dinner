@@ -1,33 +1,34 @@
 @extends('layouts.app')
 @section('content')
-    <div class="boo">
-        <div id="booking" class="section">
-            <div class="section-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="booking-form">
-                            <div class="form-header">
-                                <h1>Make your reservation</h1>
-                            </div>
+<div class="boo">
+ <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <div class="form-header">
+                            <h1>Make your reservation</h1>
+                        </div>
 
                         <form>
 
                             <div class="form-group">
-                                <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Restaurant" required>
+                                <select class="custom-select" id="inputGroupSelect02" type="text"
+                                    placeholder="Select Restaurant" required>
 
                                     <option selected>Please Choose your Restaurant </option>
-                                    @foreach($restaurants as $restaurant)
+                                    @foreach ($restaurants as $restaurant)
+                                        <option>
+                                            {{ $restaurant->name }}
 
-                                    <option>
-                                        {{$restaurant->name}}
-
-                                    </option>
+                                        </option>
                                     @endforeach
                                 </select>
                                 <span class="form-label">Restaurants</span>
                             </div>
                             <div class="form-group">
-                                <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Menu" required>
+                                <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Menu"
+                                    required>
 
 
                                     <option selected>Please Choose...</option>
@@ -117,4 +118,6 @@
             </div>
         </div>
     </div>
-@endsection
+</div>
+   
+    @endsection
