@@ -52,6 +52,7 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     // cart
     Route::get('cart','PageController@cart')->name('cart');
     Route::get('add-to-cart/{id}','PageController@addToCart')->name('add.to.cart');
+    Route::get('payment', 'pageController@payment')->name('payment');
 
 
 

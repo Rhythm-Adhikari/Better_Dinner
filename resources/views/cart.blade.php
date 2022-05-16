@@ -20,8 +20,6 @@
                     <tr data-id="{{ $id }}">
                         <td data-th="Product">
                             <div class="row">
-                                {{-- <div class="col-sm-3 hidden-xs"><img src="{{ $details['image'] }}" width="100"
-                                            height="100" class="img-responsive" /></div> --}}
                                 <div class="col-sm-9">
                                     <h4 class="nomargin">{{ $details['name'] }}</h4>
                                 </div>
@@ -29,7 +27,7 @@
                         </td>
                         <td data-th="Price">${{ $details['price'] }}</td>
                         <td data-th="Quantity">
-                            <input type="number" value="{{ $details['quantity'] }}"
+                            <input type="number" min="1" value="{{ $details['quantity'] }}"
                                 class="form-control quantity update-cart" />
                         </td>
                         <td data-th="Subtotal" class="text-center">${{ $details['price'] * $details['quantity'] }}
@@ -38,7 +36,7 @@
                             <a href="" class="remove-from-cart" style="color: #e84857;">
                                 <i class="fa fa-trash "></i>
                             </a>
-                           
+
                         </td>
                     </tr>
                 @endforeach

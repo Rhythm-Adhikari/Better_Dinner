@@ -76,4 +76,8 @@ class PageController extends Controller
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+
+    public function payment(){
+        return view('payment');
+    }
 }
