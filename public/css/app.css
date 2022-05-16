@@ -954,12 +954,6 @@ header .icons .dropdown .cart-count {
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++Footer++++++++++++++++++++++++++++*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .footer {
     padding: 40px 0;
     background-color: #e15666;
@@ -1027,16 +1021,6 @@ header .icons .dropdown .cart-count {
 
 /* media queries */
 
-
-/* @media (max-width: 1200px) {
-    html {
-        font-size: 60%;
-    }
-    header {
-        padding: 1rem 3rem;
-    }
-} */
-
 @media all and (max-width: 991.98px) {
     html {
         font-size: 55%;
@@ -1090,7 +1074,7 @@ header .icons .dropdown .cart-count {
 
 .restaurant .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
 
