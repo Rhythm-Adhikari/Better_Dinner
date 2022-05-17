@@ -52,7 +52,11 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     // cart
     Route::get('cart','PageController@cart')->name('cart');
     Route::get('add-to-cart/{id}','PageController@addToCart')->name('add.to.cart');
-    Route::get('payment', 'pageController@payment')->name('payment');
+    Route::patch('update-cart','PageController@updateCart')->name('update.cart');
+    Route::delete('remove-from-cart','PageController@removeCart')->name('remove.from.cart');
+
+
+    Route::get('payment', 'PageController@payment')->name('payment');
 
 
 
