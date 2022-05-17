@@ -52,7 +52,7 @@
                 <td colspan="5" class="text-right">
                     <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue
                         Shopping</a>
-                    <button class="btn btn-success">Checkout</button>
+                    <a href="{{ route('payment') }}" class="btn btn-warning"> Checkout</a>
                 </td>
             </tr>
         </tfoot>
@@ -63,7 +63,7 @@
 @section('scripts')
     <script>
         $(document).ready(function() {
-            $('.update-cart').on('change',function(e) {
+            $('.update-cart').on('change', function(e) {
                 e.preventDefault();
 
                 var ele = $(this);
@@ -81,7 +81,7 @@
                     }
                 });
             });
-            $(".remove-from-cart").on('click',function(e) {
+            $(".remove-from-cart").on('click', function(e) {
                 e.preventDefault();
 
                 var ele = $(this);
