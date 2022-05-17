@@ -53,6 +53,7 @@
                     <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue
                         Shopping</a>
                     <a href="{{ route('payment') }}" class="btn btn-warning"> Checkout</a>
+                    <a href="{{ route('pickup') }}" class="btn btn-warning"> Pick Up</a>
                 </td>
             </tr>
         </tfoot>

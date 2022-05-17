@@ -752,11 +752,11 @@ header .icons .dropdown .cart-count {
 .footer {
     padding: 40px 0;
     background-color: #e15666;
-    display: flex;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: inherit;
+    /*display: flex;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*position: inherit;*/
 }
 
 .footer .social {
@@ -896,120 +896,13 @@ header .icons .dropdown .cart-count {
 
 
 /*--------------------------------payment-----------------------------------*/
-
-div.box h2 {
-    border-bottom: 2px solid dimgray;
-    padding-bottom: 2%;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2%;
+.text-small {
+    font-size: 0.9rem;
 }
-
-
-/*.box {*/
-
-
-/*    margin: 2% auto;*/
-
-
-/*    align-content: center;*/
-
-
-/*    justify-content: center;*/
-
-
-/*}*/
-
-#container {
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 5px 19px 0 rgba(0, 0, 0, 0.19);
-    width: 500px;
-    height: 350px;
-    margin: 0 auto;
-    background: #f86374;
-    padding: 2% 3%;
-    border-radius: 15px;
-    justify-content: center;
+.rounded {
+    border-radius: 1rem;
 }
-
-div.box label {
-    width: 100%;
-    display: block;
-    padding: 10px 0;
-}
-
-div.box label span {
-    display: block;
-    color: #333;
-    float: left;
-    width: 100px;
-    text-align: right;
-    padding: 5px 20px 0 0;
-}
-
-.box input {
-    color: white;
-    background: #e53c4a;
-    border-style: none;
-    border-radius: 20px;
-    padding: 5px 3%;
-    text-transform: uppercase;
-    font-weight: 200;
-    transition: .5s;
-}
-
-#month {
-    color: white;
-    background: #e53c4a;
-    border-style: none;
-    border-radius: 20px;
-    padding: 5px 3%;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: .5s;
-}
-
-#year {
-    color: #ffffff;
-    margin-left: -0.3%;
-    background: #e53c4a;
-    border-style: none;
-    border-radius: 20px;
-    padding: 5px 3%;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: .5s;
-}
-
-.box .button {
-    font-weight: 100;
-    width: 250px;
-    height: 40px;
-    background: #e53c4a;
-    color: #ffffff;
-    border-style: none;
-    padding: 5px 5px;
-    border-radius: 20px;
-    position: relative;
-    left: 22%;
-}
-
-.box .button:hover {
-    background: #e53c4a;
-    color: #f86374;
-}
-
-.box .button:active {
-    background: ghostwhite;
-    color: #ffffff;
-}
-
-.box input:hover,
-.box #month:hover,
-.box #year:hover {
-    background: #ec4c5a;
-    color: #ffffff;
-}
-
+/*777777777777777777777777777777777777777777777777777777777777777777777777777777777777*/
 
 /*media query for about*/
 

@@ -57,6 +57,7 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 
 
     Route::get('payment', 'PageController@payment')->name('payment');
+    Route::get('pickup', 'PageController@pickup')->name('pickup');
 
 
 

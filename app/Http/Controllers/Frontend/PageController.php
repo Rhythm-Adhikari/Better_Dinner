@@ -100,4 +100,8 @@ class PageController extends Controller
     public function payment(){
         return view('payment');
     }
+
+    public function pickup(){
+        return view('pickup');
+    }
 }
