@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+{{-- TODO: fix the css of restaurant page --}}
     <section class="restaurant" id="restaurant">
 
         <h3 class="sub-heading"> Our Partners </h3>
@@ -19,7 +19,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <h5 class="card-title" style="font-size: 2.5rem">{{$restaurant->name}}</h5>
-                     <p class="card-text">{{$restaurant->description}}</p>
+                     <p class="card-text" style="font-size: small">{{$restaurant->description}}</p>
                      <a href="{{route('menu',$restaurant->id)}}" class="btn btn-primary">Order Now</a>
                 </div>
             @endforeach

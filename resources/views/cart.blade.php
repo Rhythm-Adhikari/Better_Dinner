@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-
+{{-- TODO: Fix the ajax for update the remove --}}
     <table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
@@ -22,6 +22,8 @@
                             <div class="row">
                                 <div class="col-sm-9">
                                     <h4 class="nomargin">{{ $details['name'] }}</h4>
+                                    {{-- <h4 class="nomargin">{{ $details['restaurant_name'] }}</h4>
+                                    <h4 class="nomargin">{{ $details['address'] }}</h4> --}}
                                 </div>
                             </div>
                         </td>
@@ -71,7 +73,7 @@
 
                 $.ajax({
                     url: '/update-cart',
-                    method: "patch",
+                    method: "PATCH",
                     data: {
 
                         id: ele.parents('tr').attr('data-id'),
@@ -92,10 +94,12 @@
                         url: "{{ route('remove.from.cart') }}",
                         method: "DELETE",
                         data: {
-                            id: ele.parents("tr").attr("data-id")
+                            _token: '{{ csrf_token() }}', 
+                            id: ele.parents("tr").attr('data-id')
                         },
                         success: function(response) {
                             window.location.reload();
+                            
                         }
                     });
                 }

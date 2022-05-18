@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+{{-- TODO: Fix the input field --}}
 <div class="boo">
  <div id="booking" class="section">
         <div class="section-center">

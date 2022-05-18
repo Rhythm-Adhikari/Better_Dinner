@@ -59,6 +59,9 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     Route::get('payment', 'PageController@payment')->name('payment');
     Route::get('pickup', 'PageController@pickup')->name('pickup');
 
+    // Pick Up conformation
+    Route::POST('pick-up-confirm','PageController@pickUpConfirm')->name('pickupconfirm');
+
 
 
 });

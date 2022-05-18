@@ -61,6 +61,7 @@ class PageController extends Controller
 
     public function addToCart($id){
         $menu=Menu::findOrFail($id);
+        $restaurant=Restaurant::where('id',$menu->restaurant_id)->first();
         $cart= session()->get('cart',[]);
 
         if(isset($cart[$id])){
@@ -70,6 +71,9 @@ class PageController extends Controller
                 'name'=>$menu->name,
                 'quantity'=>1,
                 'price'=>$menu->price,
+                'restaurant_name'=>$restaurant->name,
+                'address'=>$restaurant->location,
+                'phone'=>$restaurant->phone,
             ];
 
         }
