@@ -15,7 +15,7 @@
                         <form>
 
                             <div class="form-group">
-                                <select class="custom-select" id="inputGroupSelect02" type="text"
+                                <select class="form-control" type="text"
                                     placeholder="Select Restaurant" required>
 
                                     <option selected>Please Choose your Restaurant </option>
@@ -29,11 +29,16 @@
                                 <span class="form-label">Restaurants</span>
                             </div>
                             <div class="form-group">
-                                <select class="custom-select" id="inputGroupSelect02" type="text" placeholder="Select Menu"
+                                <select class="form-control" type="text" placeholder="Select Menu"
                                     required>
 
 
-                                    <option selected>Please Choose...</option>
+{{--                                    <option selected>Please Choose...</option>--}}
+{{--                                    @foreach ($menus as $menus)--}}
+{{--                                        <option>--}}
+{{--                                            {{$menus->name}}--}}
+{{--                                        </option>--}}
+{{--                                    @endforeach--}}
 
 
                                 </select>
@@ -121,5 +126,5 @@
         </div>
     </div>
 </div>
-   
+
     @endsection
