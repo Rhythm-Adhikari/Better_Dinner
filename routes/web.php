@@ -26,7 +26,7 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 
 Route::get('/', function () {
-    $restaurants = Restaurant::get();
+    $restaurants = Restaurant::paginate(6);
     // dd($restaurants);
     return view('welcome', compact('restaurants'));
 });
