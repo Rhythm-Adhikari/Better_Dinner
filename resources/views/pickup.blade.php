@@ -64,11 +64,11 @@
 
                             <!-- credit card info-->
                             <div id="nav-tab-card" class="tab-pane fade show active">
-                                <p class="alert alert-success">Some text success or error</p>
+{{--                                <p class="alert alert-success">Some text success or error</p>--}}
                                 <form role="form">
                                     <div class="form-group">
-                                        <label for="username">Full name (on the card)</label>
-                                        <input type="text" name="username" placeholder="Jassa" required=""
+                                        <label for="username">Full name </label>
+                                        <input type="text" name="username" placeholder="JOHN CITIZEN" required=""
                                             class="form-control">
                                     </div>
                                     <div class="form-group">
@@ -118,14 +118,14 @@
 
                             <!-- Paypal info -->
                             <div id="nav-tab-paypal" class="tab-pane fade">
-                                <p>Paypal is easiest way to pay online</p>
+                                <p>Pay Online Using Paypal</p>
                                 <p>
                                     <button type="button" class="btn btn-primary rounded-pill"><i
-                                            class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                            class="fa fa-paypal mr-2"></i> Log into Paypal</button>
                                 </p>
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
+{{--                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do--}}
+{{--                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.--}}
+{{--                                </p>--}}
                             </div>
                             <!-- End -->
 
@@ -134,18 +134,17 @@
                                 <h6>Bank account details</h6>
                                 <dl>
                                     <dt>Bank</dt>
-                                    <dd> THE WORLD BANK</dd>
+                                    <dd> THE Australia BANK</dd>
                                 </dl>
                                 <dl>
                                     <dt>Account number</dt>
-                                    <dd>7775877975</dd>
+                                    <dd>1231231230</dd>
                                 </dl>
                                 <dl>
-                                    <dt>IBAN</dt>
-                                    <dd>CZ7775877975656</dd>
+                                    <dt>Pay-ID</dt>
+                                    <dd>04041515274</dd>
                                 </dl>
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <p class="text-muted">Pay Now using pay id for faster and easier payment
                                 </p>
                             </div>
                             <!-- End -->
@@ -153,7 +152,7 @@
                         <!-- End -->
 
                     </div>
-                
+
             </div>
         </div>
     </div>

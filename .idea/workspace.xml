@@ -4,8 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="booking menu requires fixing">
+    <list default="true" id="c6ce3d2e-ef26-4263-a489-07ba93290d20" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pickup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pickup.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +228,8 @@
       <workItem from="1652850151650" duration="3002000" />
       <workItem from="1652868806749" duration="3945000" />
       <workItem from="1652952379370" duration="1328000" />
+      <workItem from="1653039287019" duration="1608000" />
+      <workItem from="1653125374809" duration="2838000" />
     </task>
     <task id="LOCAL-00001" summary="final working test">
       <created>1652185220193</created>
@@ -374,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652873830198</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="booking menu requires fixing">
+      <created>1653039372174</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1653039372174</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,13 +418,13 @@
     <MESSAGE value="order issue" />
     <MESSAGE value="menu controllee and menu create issue" />
     <MESSAGE value="aboutme cahnge and fixed,major issue with booking fixed, footer done and minor css fix" />
-    <MESSAGE value="test" />
     <MESSAGE value="test, minor bug fix" />
     <MESSAGE value="Test payment and minor bug fix" />
     <MESSAGE value="bug in restaurant order" />
     <MESSAGE value="need to fix pickup" />
     <MESSAGE value="booking menu requires fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="booking menu requires fixing" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
