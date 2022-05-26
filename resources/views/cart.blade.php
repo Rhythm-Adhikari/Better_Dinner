@@ -1,8 +1,16 @@
 @extends('layouts.app')
 @section('content')
+    {{-- TODO: Fix the ajax for update the remove --}}
 
-{{-- TODO: Fix the ajax for update the remove --}}
-    <table id="cart" class="table table-hover table-condensed">
+    {{-- <div class="cart"> --}}
+        <div class="container" style="padding-bottom: 200px">
+            <livewire:cart-list />
+        </div>
+      
+    {{-- </div> --}}
+
+    {{-- <span id="status"></span> --}}
+    {{-- <table id="cart" class="table table-hover table-condensed">
         <thead>
             <tr>
                 <th style="width:50%">Product</th>
@@ -23,7 +31,7 @@
                                 <div class="col-sm-9">
                                     <h4 class="nomargin">{{ $details['name'] }}</h4>
                                     {{-- <h4 class="nomargin">{{ $details['restaurant_name'] }}</h4>
-                                    <h4 class="nomargin">{{ $details['address'] }}</h4> --}}
+                                    <h4 class="nomargin">{{ $details['address'] }}</h4> 
                                 </div>
                             </div>
                         </td>
@@ -59,51 +67,8 @@
                 </td>
             </tr>
         </tfoot>
-    </table>
-
+    </table> --}}
 @endsection
 
 @section('scripts')
-    <script>
-        $(document).ready(function() {
-            $('.update-cart').on('change', function(e) {
-                e.preventDefault();
-
-                var ele = $(this);
-
-                $.ajax({
-                    url: '/update-cart',
-                    method: "PATCH",
-                    data: {
-
-                        id: ele.parents('tr').attr('data-id'),
-                        quantity: ele.parents('tr').find('.quantity').val()
-                    },
-                    success: function(response) {
-                        window.location.reload();
-                    }
-                });
-            });
-            $(".remove-from-cart").on('click', function(e) {
-                e.preventDefault();
-
-                var ele = $(this);
-
-                if (confirm("Are you sure want to remove?")) {
-                    $.ajax({
-                        url: "{{ route('remove.from.cart') }}",
-                        method: "DELETE",
-                        data: {
-                            _token: '{{ csrf_token() }}', 
-                            id: ele.parents("tr").attr('data-id')
-                        },
-                        success: function(response) {
-                            window.location.reload();
-                            
-                        }
-                    });
-                }
-            });
-        });
-    </script>
 @endsection

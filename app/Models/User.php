@@ -43,4 +43,12 @@ class User extends Authenticatable
     public function orders(){
         return $this->hasMany(Order::class,'user_id','id');
     }
+
+    public function pickups(){
+        return $this->hasMany(Pickup::class,'user_id','id');
+    }
+
+    public function transactions(){
+        return $this->hasMany(Transaction::class,'user_id','id');
+    }
 }

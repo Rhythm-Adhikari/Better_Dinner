@@ -23,8 +23,15 @@
                     </div>
                     <h3>{{$menu->name}}</h3>
                     <p>{{$menu->description}}</p>
-                    <a href="{{ route('add.to.cart', $menu->id) }}" class="btn">add to cart</a>
-                    <span class="price">{{$menu->price}}</span>
+                    <h4 class="price">{{$menu->price}}</h4>
+                    <form action="{{ route('add.to.cart') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ $menu->id }}" name="id">
+                        <input type="hidden" value="{{ $menu->name }}" name="name">
+                        <input type="hidden" value="{{ $menu->price }}" name="price">
+                        <input type="hidden" value="1" name="quantity">
+                        <button class="btn btn-primary">add to cart</button>
+                    </form>
                 </div>
             </div>
             @endforeach

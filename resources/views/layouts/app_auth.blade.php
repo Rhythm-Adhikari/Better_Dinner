@@ -25,6 +25,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ asset('backend/vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('backend/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/auth.js') }}" defer></script>
     <script>
         $(document).ready(function() {
             let token = document.head.querySelector('meta[name = "csrf-token"]');
@@ -45,7 +46,6 @@
     {{-- Bootstrap JS & Jquery --}}
 
     {{-- Default JS --}}
-    <script src="{{ asset('js/auth.js') }}" defer></script>
 
 </body>
 

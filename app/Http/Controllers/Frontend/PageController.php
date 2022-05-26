@@ -4,26 +4,18 @@ namespace App\Http\Controllers\Frontend;
 
 use PDO;
 use App\Models\Menu;
+use App\Models\Pickup;
 use App\Models\Restaurant;
+use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
+use App\Helpers\UUIDGenerate;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\OrderMenu;
+use App\Models\Transaction;
 
 class PageController extends Controller
 {
-    public function about()
-    {
-        return view('about');
-    }
-    public function policy()
-    {
-        return view('policy');
-    }
-    public function tc()
-    {
-        return view('tc');
-    }
-
 
     public function booking()
     {
@@ -55,57 +47,92 @@ class PageController extends Controller
         return view('menus', compact('menus'));
     }
 
-    public function cart(){
+    // CART
+    public function cart()
+    {
         return view('cart');
     }
 
-    public function addToCart($id){
-        $menu=Menu::findOrFail($id);
-        $restaurant=Restaurant::where('id',$menu->restaurant_id)->first();
-        $cart= session()->get('cart',[]);
+    public function addToCart(Request $request)
+    {
+        \Cart::add([
+            'id' => $request->id,
+            'name' => $request->name,
+            'price' => $request->price,
+            'quantity' => $request->quantity,
+        ]);
+        session()->flash('success', 'Product is Added to Cart Successfully !');
+        return redirect()->route('cart.list');
+    }
 
-        if(isset($cart[$id])){
-            $cart[$id]['quantity']++;
-        }else{
-            $cart[$id]=[
-                'name'=>$menu->name,
-                'quantity'=>1,
-                'price'=>$menu->price,
-                'restaurant_name'=>$restaurant->name,
-                'address'=>$restaurant->location,
-                'phone'=>$restaurant->phone,
-            ];
 
+    // Pickup Order
+
+    public function pickup(Request $request)
+    {
+        $cartItems = \Cart::getContent();
+        return view('pickup', compact('cartItems'));
+    }
+    public function pickUpConfirm()
+    {
+        $cartItems = \Cart::getContent();
+        $pickup = new Pickup();
+        $pickup->user_id = auth()->user()->id;
+        $pickup->total = \Cart::getTotal();
+        $pickup->pickup_token = UUIDGenerate::pickUpToken();
+        $pickup->save();
+
+        foreach ($cartItems as $item) {
+            $menus = new OrderMenu();
+            $menu =  DB::table('menus')->where('id', $item->id)->first();
+            $restaurantId = DB::table('restaurants')->where('id', $menu->restaurant_id)->first();
+            $menus->name = $item->name;
+            $menus->quantity = $item->quantity;
+            $menus->restaurant_id = $restaurantId->id;
+            $menus->token = $pickup->pickup_token;
+            $menus->save();
         }
-        session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+
+        $transaction = new Transaction();
+        $transaction->user_id = auth()->user()->id;
+        $transaction->ref_no = UUIDGenerate::refNumber();
+        $transaction->trx_id = UUIDGenerate::trxId();
+        $transaction->amount = \Cart::getTotal();
+        $transaction->token = $pickup->pickup_token;
+        $transaction->save();
+        \Cart::clear();
+        return redirect(route('pickupdetail'));
     }
 
-    public function updateCart(Request $request){
-        if($request->id && $request->quantity){
-            $cart = session()->get('cart');
-            $cart[$request->id]['quantity'] = $request->quantity;
-            session()->put('cart', $cart);
-            session()->flash('success', 'Cart updated successfully');
-        }
+    public function pickUpDetail()
+    {
+        $pickupDetail = DB::table('pickups')->where('user_id', auth()->user()->id)->latest('created_at')->first();
+        $menus =  DB::table('order_menus')->where('token', $pickupDetail->pickup_token)->get();
+
+        return view('pickup-up-detail', compact('pickupDetail', 'menus'));
     }
 
-    public function removeCart(Request $request){
-        if($request->id) {
-            $cart = session()->get('cart');
-            if(isset($cart[$request->id])) {
-                unset($cart[$request->id]);
-                session()->put('cart', $cart);
-            }
-            session()->flash('success', 'Product removed successfully');
-    }
-}
-
-    public function payment(){
-        return view('payment');
+    // Delivery
+    public function delivery(Request $request)
+    {
+        $cartItems = \Cart::getContent();
+        return view('delivery', compact('cartItems'));
     }
 
-    public function pickup(){
-        return view('pickup');
+
+
+    // Footer Links
+
+    public function about()
+    {
+        return view('about');
+    }
+    public function policy()
+    {
+        return view('policy');
+    }
+    public function tc()
+    {
+        return view('tc');
     }
 }

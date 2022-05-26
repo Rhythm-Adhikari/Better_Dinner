@@ -50,17 +50,24 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 
 
     // cart
-    Route::get('cart','PageController@cart')->name('cart');
-    Route::get('add-to-cart/{id}','PageController@addToCart')->name('add.to.cart');
-    Route::patch('update-cart','PageController@updateCart')->name('update.cart');
-    Route::delete('remove-from-cart','PageController@removeCart')->name('remove.from.cart');
+    Route::get('cart','PageController@cart')->name('cart.list');
+    Route::POST('add-to-cart','PageController@addToCart')->name('add.to.cart');
+    // Route::PUT('update-cart','PageController@updateCart')->name('update.cart');
+    // Route::delete('remove-from-cart','PageController@removeCart')->name('remove.from.cart');
 
 
-    Route::get('payment', 'PageController@payment')->name('payment');
-    Route::get('pickup', 'PageController@pickup')->name('pickup');
-
-    // Pick Up conformation
+    
+    
+    // Pick Up 
+    Route::GET('pickup', 'PageController@pickup')->name('pickup');
     Route::POST('pick-up-confirm','PageController@pickUpConfirm')->name('pickupconfirm');
+    Route::GET('pick-up-detail','PageController@pickUpDetail')->name('pickupdetail');
+
+    
+    // delivery 
+    Route::GET('delivery', 'PageController@delivery')->name('delivery');
+    Route::POST('delivery-confirm','PageController@deliveryConfirm')->name('deliveryconfirm');
+    Route::GET('delivery-detail','PageController@deliveryDetail')->name('deliverydetail');
 
 
 

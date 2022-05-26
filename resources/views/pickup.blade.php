@@ -7,33 +7,29 @@
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">{{ auth()->user()->name }}'s Orders</span>
-                    <span class="badge badge-secondary badge-pill">{{ count((array) session('cart')) }}</span>
+                    <span class="badge badge-secondary badge-pill"> Total {{ Cart::getTotalQuantity() }} Cart</span>
                 </h4>
                 <ul class="list-group mb-3">
-                    @php $total = 0 @endphp
-                    @if (session('cart'))
-                        @foreach (session('cart') as $id => $details)
-                            @php $total += $details['price'] * $details['quantity'] @endphp
+                   
+                        @foreach ($cartItems as $item)
+                        
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">{{ $details['name'] }}</h6>
-                                    <small class="text-muted">Quantity: {{ $details['quantity'] }} </small><br>
-                                    <small class="text-muted">Name: {{ $details['restaurant_name'] }} </small><br>
-                                    <small class="text-muted">Location: {{ $details['address'] }} </small><br>
-                                    <small class="text-muted">Phone: {{ $details['phone'] }} </small>
+                                    <h6 class="my-0">{{ $item['name'] }}</h6>
+                                    <small class="text-muted">Quantity: {{ $item['quantity'] }} </small><br>
                                 </div>
-                                <span class="text-muted">${{ $details['price'] }}</span>
+                                <span class="text-muted">${{ $item['price'] }}</span>
                             </li>
                         @endforeach
-                    @endif
+                          
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (AUD)</span>
-                        <strong>Total ${{ $total }}</strong>
+                        <strong> Total: ${{ Cart::getTotal() }}</strong>
                     </li>
                 </ul>
             </div>
             <div class="col-md-8 order-md-1">
-                    <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="bg-white rounded-lg shadow-sm" style="padding-bottom: 50px">
                         <!-- Credit card form tabs -->
                         <h4>Payment</h4>
                         <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
@@ -65,7 +61,8 @@
                             <!-- credit card info-->
                             <div id="nav-tab-card" class="tab-pane fade show active">
                                 <p class="alert alert-success">Some text success or error</p>
-                                <form role="form">
+                                <form role="form" action="{{route('pickupconfirm')}}" method="POST" >
+                                    @csrf
                                     <div class="form-group">
                                         <label for="username">Full name (on the card)</label>
                                         <input type="text" name="username" placeholder="Jassa" required=""
@@ -109,7 +106,7 @@
 
 
                                     </div>
-                                    <button type="button"
+                                    <button type="submit"
                                         class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm
                                     </button>
                                 </form>
@@ -157,6 +154,8 @@
             </div>
         </div>
     </div>
+
+    
 
 
 @endsection

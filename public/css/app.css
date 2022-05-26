@@ -52,6 +52,10 @@ section:nth-child(even) {
     letter-spacing: 0.1rem;
 }
 
+hr.summary {
+    border-top: 1px dashed gray;
+}
+
 
 /* ================================================== */
 
@@ -627,6 +631,10 @@ header .icons .dropdown .cart-count {
 
 .checkout .a {
     background: var(--primary);
+}
+
+.cart .cart-list {
+    max-width: 50in;
 }
 
 
