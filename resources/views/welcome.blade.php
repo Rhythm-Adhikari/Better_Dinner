@@ -92,9 +92,10 @@
                                     style="color: #e84857;font-family:  'Abhaya Libre', serif; font-weight: 700">Delivery</span>
                                 in Your Area</span>
                             <h3>Better Dinner</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perferendis eius dicta
-                                maxime eveniet, repellendus beatae, similique enim eaque officiis doloremque labore?
-                                Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
+                            <p>Better Dinner Specializes in providing our customers with the best food in your local area. Be it Delivery,
+                            Pick-Up, booking. we feature best food- made with fresh ingredients and masterful preparation.
+                                Whether you’re ordering a multi-course meal or grabbing a table for a drink and pizza at the bar,Better dinner makes it
+                                perfectfor you to order your meal, with friends, family, clients and business associates.</p>
                             <a href="#" class="btn">Order Now</a>
                         </div>
 
@@ -131,9 +132,8 @@
                                 style="color: #e84857;font-family:  'Abhaya Libre', serif; font-weight: 700">Services</span>
                         </span>
                         <h3>Better Dinner</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error perferendis eius dicta
-                            maxime eveniet, repellendus beatae, similique enim eaque officiis doloremque labore?
-                            Fugit culpa provident consequatur animi sint, eum necessitatibus!</p>
+                        <p>We believe in commitment to our community and in fostering long term relationships with local Business and small restaurants.
+                            Our restaurants reflect these connections, featuring local, seasonal produce and sustainably sourced ingredients.</p>
                         <a href="#" class="btn">Order Now</a>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                         class="bi bi-twitter" viewBox="0 0 16 16">
                         <path
                             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                        </i></a>
+                        </svg></a>
                 <a href="#"><svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                         <path
