@@ -42,7 +42,6 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/booking','PageController@booking')->name('booking');
     Route::get('/order','PageController@order')->name('order');
     Route::get('/restaurant','PageController@restaurant')->name('restaurant');
     Route::get('menu/{restaurant_id}', 'PageController@menu')->name('menu');
@@ -52,9 +51,6 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     // cart
     Route::get('cart','PageController@cart')->name('cart.list');
     Route::POST('add-to-cart','PageController@addToCart')->name('add.to.cart');
-    // Route::PUT('update-cart','PageController@updateCart')->name('update.cart');
-    // Route::delete('remove-from-cart','PageController@removeCart')->name('remove.from.cart');
-
 
     
     
@@ -68,6 +64,15 @@ Route::middleware('auth')->namespace('Frontend')->group(function () {
     Route::GET('delivery', 'PageController@delivery')->name('delivery');
     Route::POST('delivery-confirm','PageController@deliveryConfirm')->name('deliveryconfirm');
     Route::GET('delivery-detail','PageController@deliveryDetail')->name('deliverydetail');
+
+    // Booking
+    Route::get('/booking','PageController@booking')->name('booking');
+    Route::get('booking/{restaurant_id}', 'PageController@bookingMenu')->name('booking.menu');
+    // Booking Cart
+    Route::POST('booking-add-to-cart','PageController@bookingAddToCart')->name('booking.add.to.cart');
+    Route::GET('booking-confirm','PageController@bookingConfirm')->name('booking.confirm');
+    Route::POST('booking-confirm','PageController@bookingStore')->name('booking.store');
+    Route::GET('booking-detail','PageController@bookingDetail')->name('bookingdetail');
 
 
 

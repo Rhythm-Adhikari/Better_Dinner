@@ -27,8 +27,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+        rel='stylesheet'>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
+        rel="stylesheet">
     @livewireStyles
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -60,11 +64,11 @@
                         <i class="fas fa-times" id="close"></i>
                     </form>
 
-                    <a class="fas fa-shopping-cart" href="{{route('cart.list')}}" >
-                   
-                            {{-- <i class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></i>  --}}
-                            {{-- <span class="badge badge-pill badge-danger cart-count"> {{ Cart::getTotalQuantity() }}</span> --}}
-                        </a>
+                    <a class="fas fa-shopping-cart" href="{{ route('cart.list') }}">
+
+                        {{-- <i class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></i> --}}
+                        {{-- <span class="badge badge-pill badge-danger cart-count"> {{ Cart::getTotalQuantity() }}</span> --}}
+                    </a>
                     <a class="fas fa-sign-out-alt" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a>
 
@@ -165,6 +169,7 @@
     <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
@@ -172,7 +177,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         $(document).ready(function() {
             let token = document.head.querySelector('meta[name = "csrf-token"]');

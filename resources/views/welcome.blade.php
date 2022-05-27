@@ -61,11 +61,11 @@
                         <i class="fas fa-times" id="close"></i>
                     </form>
 
-                    <div class="dropdown">
-                        <i class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></i> <span
-                            class="badge badge-pill badge-danger cart-count">{{ count((array) session('cart')) }}</span>
-                        @include('header_cart')
-                    </div>
+                    <a class="fas fa-shopping-cart" href="{{route('cart.list')}}" >
+                   
+                        {{-- <i class="fas fa-shopping-cart" data-toggle="dropdown" aria-hidden="true"></i>  --}}
+                        {{-- <span class="badge badge-pill badge-danger cart-count"> {{ Cart::getTotalQuantity() }}</span> --}}
+                    </a>
 
 
 
@@ -96,7 +96,7 @@
                             Pick-Up, booking. we feature best food- made with fresh ingredients and masterful preparation.
                                 Whether you’re ordering a multi-course meal or grabbing a table for a drink and pizza at the bar,Better dinner makes it
                                 perfectfor you to order your meal, with friends, family, clients and business associates.</p>
-                            <a href="#" class="btn">Order Now</a>
+                            <a href="{{route('restaurant')}}" class="btn">Order Now</a>
                         </div>
 
 

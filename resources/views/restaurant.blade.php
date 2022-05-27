@@ -1,9 +1,8 @@
 @extends('layouts.app')
 @section('content')
-{{-- TODO: fix the css of restaurant page --}}
+
     <section class="restaurant" id="restaurant">
 
-        <h3 class="sub-heading"> Our Partners </h3>
         <h1 class="heading"> Our Partners </h1>
 
         <div class="box-container">

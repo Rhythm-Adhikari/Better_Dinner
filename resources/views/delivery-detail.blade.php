@@ -8,12 +8,16 @@
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title" style="font-weight: bolder"> Pick up Token</h3>
-                        <p class="card-text" style="color:#e84857; font-weight: bold;">{{ $pickupDetail->pickup_token }}</p>
-                        <p class="card-text">Show this token at the restaurant to pick up your food.</p>
+                        <h3 class="card-title" style="font-weight: bolder"> Delivery Token</h3>
+                        <p class="card-text" style="color:#e84857; font-weight: bold;">
+                            {{ $deliveryDetail->delivery_token }}</p>
                         <hr class="summary">
                         <small class="text-muted">Order submitted: 
-                            {{ Carbon\Carbon::parse($pickupDetail->created_at) }} </small>
+                            {{ Carbon\Carbon::parse($deliveryDetail->created_at) }} </small> <br>
+                        <small class="text-muted">Delivery Address:
+                            {{ $deliveryDetail->address }} </small><br>
+                        <small class="text-muted">Phone Number:
+                            {{ $deliveryDetail->phone }} </small><br>
                         <hr class="summary">
                         <div class="card">
                             <div class="card-body">
@@ -32,10 +36,6 @@
                                                     <h5 class="my-0">{{ $menu->name }}</h5>
                                                     <small class="text-muted">Quantity: {{ $menu->quantity }}
                                                     </small><br>
-                                                    <small class="text-muted">Restaurant: {{ $restaurant->name }}
-                                                    </small><br>
-                                                    <small class="text-muted">Location: {{ $restaurant->location }}
-                                                    </small><br>
                                                 </div>
 
                                             </li>
@@ -44,7 +44,7 @@
 
                                     <li class="list-group-item d-flex justify-content-between">
                                         <span>Total (AUD)</span>
-                                        <strong> Total: ${{ $pickupDetail->total }}</strong>
+                                        <strong> Total: ${{ $deliveryDetail->total }}</strong>
                                     </li>
                                 </ul>
                             </div>
@@ -53,7 +53,7 @@
                 </div>
 
             </div>
-          
+
         </div>
     </div>
 @endsection

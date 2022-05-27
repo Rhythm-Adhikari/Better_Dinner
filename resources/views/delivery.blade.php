@@ -33,7 +33,8 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="firstName">Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" name="name" value="{{auth()->user()->name}}" required>
+                            <input type="text" class="form-control" id="firstName" placeholder="" name="name"
+                                value="{{ auth()->user()->name }}" required>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -41,7 +42,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="address">Phone</label>
+                        <label for="phone">Phone</label>
                         <input type="text" class="form-control" placeholder="041234578" name="phone" required>
                         <div class="invalid-feedback">
                             Please enter your shipping address.
@@ -49,9 +50,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="address2">Address</label>
-                        <input type="text" class="form-control" id="address2" placeholder="Apartment or suite"
-                            name="address">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" placeholder="Apartment or suite" name="address">
                     </div>
                     <hr class="mb-4">
                     <hr class="mb-4">

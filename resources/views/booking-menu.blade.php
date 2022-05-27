@@ -3,7 +3,9 @@
 
     <section class="menu" id="menu">
 
-        <h1 class="heading"> today's speciality!!!! </h1>
+        <h1 class="heading"> Would you like to pre-order the food?  </h1>
+        {{-- <h3 class="text-muted">Or</h3>
+        <a href="" class="btn btn-primary">Book a table without meal</a> --}}
 
         <div class="box-container">
             @foreach($menus as $menu)
@@ -23,13 +25,13 @@
                     <h3>{{$menu->name}}</h3>
                     <p>{{$menu->description}}</p>
                     <h4 class="price">{{$menu->price}}</h4>
-                    <form action="{{ route('add.to.cart') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('booking.add.to.cart') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" value="{{ $menu->id }}" name="id">
                         <input type="hidden" value="{{ $menu->name }}" name="name">
                         <input type="hidden" value="{{ $menu->price }}" name="price">
                         <input type="hidden" value="1" name="quantity">
-                        <button class="btn btn-primary">add to cart</button>
+                        <button class="btn btn-primary">Pre-order</button>
                     </form>
                 </div>
             </div>
