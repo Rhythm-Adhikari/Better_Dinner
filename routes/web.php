@@ -24,7 +24,7 @@ Route::post('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.log
 
 
 
-
+// routes that don't need middleware
 Route::get('/', function () {
     $restaurants = Restaurant::paginate(6);
     // dd($restaurants);

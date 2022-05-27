@@ -70,26 +70,29 @@ class PageController extends Controller
         session()->flash('success', 'Product is Added to Cart Successfully !');
         return redirect()->route('booking.confirm');
     }
-    public function bookingConfirm(){
+    public function bookingConfirm()
+    {
         return view('booking-confirm');
     }
 
     public function bookingStore(Request $request)
     {
+        // make new booking data
         $cartItems = \Cart::getContent();
         $booking = new Booking();
         $booking->user_id = auth()->user()->id;
         $booking->total = \Cart::getTotal();
         $booking->booking_token = UUIDGenerate::bookingToken();
-        $booking->name=$request->name;
-        $booking->phone=$request->phone;
-        $booking->time=$request->time;
-        $booking->adult=$request->adult;
-        $booking->children=$request->children;
-        $booking->date= Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');;
+        $booking->name = $request->name;
+        $booking->phone = $request->phone;
+        $booking->time = $request->time;
+        $booking->adult = $request->adult;
+        $booking->children = $request->children;
+        $booking->date = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');;
         $booking->save();
 
         foreach ($cartItems as $item) {
+            // go through cart list and add to order menu table
             $menus = new OrderMenu();
             $menu =  DB::table('menus')->where('id', $item->id)->first();
             $restaurantId = DB::table('restaurants')->where('id', $menu->restaurant_id)->first();
@@ -100,6 +103,7 @@ class PageController extends Controller
             $menus->save();
         }
 
+        // transaction being record after pay
         $transaction = new Transaction();
         $transaction->user_id = auth()->user()->id;
         $transaction->ref_no = UUIDGenerate::refNumber();
@@ -147,6 +151,7 @@ class PageController extends Controller
     }
     public function pickUpConfirm()
     {
+
         $cartItems = \Cart::getContent();
         $pickup = new Pickup();
         $pickup->user_id = auth()->user()->id;
@@ -155,6 +160,7 @@ class PageController extends Controller
         $pickup->save();
 
         foreach ($cartItems as $item) {
+            // go through cart list and add to order menu table
             $menus = new OrderMenu();
             $menu =  DB::table('menus')->where('id', $item->id)->first();
             $restaurantId = DB::table('restaurants')->where('id', $menu->restaurant_id)->first();
@@ -164,7 +170,7 @@ class PageController extends Controller
             $menus->token = $pickup->pickup_token;
             $menus->save();
         }
-
+        // transaction being record after pay
         $transaction = new Transaction();
         $transaction->user_id = auth()->user()->id;
         $transaction->ref_no = UUIDGenerate::refNumber();
@@ -204,6 +210,7 @@ class PageController extends Controller
         $delivery->save();
 
         foreach ($cartItems as $item) {
+            // go through cart list and add to order menu table
             $menus = new OrderMenu();
             $menu =  DB::table('menus')->where('id', $item->id)->first();
             $restaurantId = DB::table('restaurants')->where('id', $menu->restaurant_id)->first();
@@ -213,7 +220,7 @@ class PageController extends Controller
             $menus->token = $delivery->delivery_token;
             $menus->save();
         }
-
+        // transaction being record after pay 
         $transaction = new Transaction();
         $transaction->user_id = auth()->user()->id;
         $transaction->ref_no = UUIDGenerate::refNumber();
