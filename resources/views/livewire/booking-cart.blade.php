@@ -49,8 +49,7 @@
                 </tr>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue
-                            Shopping</a>
+                        <a href="{{ url('/booking') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i>Add More</a>
                     </td>
                 </tr>
             </tfoot>
