@@ -43,7 +43,10 @@
                                     <a href= {{route('admin.menu.edit', $menu->id )}}>
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                   <i class="fas fa-trash"></i>
+                                    <a href="" class="text-danger delete" data-id={{ $menu->id }}>
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                 
                                 </td>
                             </tr>
                         </tbody>
@@ -56,4 +59,34 @@
 
 
 
+@endsection
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '.delete', function(e) {
+                e.preventDefault();
+
+                var id = $(this).data('id');
+
+                Swal.fire({
+                    title: 'Are you sure, you want to delete?',
+                    showCancelButton: true,
+                    confirmButtonText: 'confirm',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: '/admin/menu/' + id,
+                            type: 'DELETE',
+                            success: function() {
+                                location.reload();
+                            }
+                        });
+                    }
+                })
+            });
+        });
+
+
+
+    </script>
 @endsection

@@ -27,7 +27,7 @@ class UUIDGenerate{
     }
 
     public static function pickUpToken(){
-        $number = 'pickup#'.mt_rand(100000,999999);
+        $number = 'pickup-'.mt_rand(100000,999999);
         if(Pickup::where('pickup_token',$number)->exists()){
             self::pickUpToken();
         }
@@ -35,7 +35,7 @@ class UUIDGenerate{
     }
 
     public static function deliveryToken(){
-        $number = 'delivery#'.mt_rand(100000,999999);
+        $number = 'delivery-'.mt_rand(100000,999999);
         if(Delivery::where('delivery_token',$number)->exists()){
             self::deliveryToken();
         }
@@ -43,7 +43,7 @@ class UUIDGenerate{
     }
 
     public static function bookingToken(){
-        $number = 'booking#'.mt_rand(100000,999999);
+        $number = 'booking-'.mt_rand(100000,999999);
         if(Booking::where('booking_token',$number)->exists()){
             self::bookingToken();
         }

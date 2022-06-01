@@ -55,4 +55,12 @@ class MenuController extends Controller
 
         return redirect()->route('admin.menu.index')->with('create', "Successfully updated");
     }
+
+    public function destroy($id)
+    {
+        $menu= Menu::findOrFail($id);
+        $menu->delete();
+
+        return 'success';
+    }
 }

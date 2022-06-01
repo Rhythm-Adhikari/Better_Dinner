@@ -2,7 +2,7 @@
 @section('title', 'Restaurant')
 @section('restaurant-active', 'active')
 @section('content')
-<H1> create restaurnant </H1>
+<H1> create restaurant </H1>
 
 <div class="card">
     <div class="card-body">
