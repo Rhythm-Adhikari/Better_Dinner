@@ -8,9 +8,11 @@
 
         <div class="box-container">
             @foreach ($restaurants as $restaurant)
+            <div class="box">
                 <div class="image">
                     <img class="card-img-top" src="{{ asset('assets/cooking.png') }}" alt="Card image cap">
                 </div>
+            </div>
                 <div class="content">
                     <div class="stars">
                         <i class="fas fa-star"></i>
